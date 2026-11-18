@@ -1,0 +1,28 @@
+# Data flow contracts (Blueprint §5). Every permitted flow MUST be registered.
+required_fields: [owner, destination, classification, authorization, integrity, retention, failure_behavior]
+flows:
+  F1:
+    name: Local telemetry
+    path: source -> collector -> buffer -> parser -> local storage and detection
+    contract: [source identification, authenticated transport where supported, timestamps, classification, monitored delivery]
+  F2:
+    name: Connected query
+    path: enterprise hub -> approved regional query endpoint
+    contract: [named identities, constrained indices or views, local authorization, query limits, audit record]
+  F3:
+    name: Query result
+    path: regional endpoint -> enterprise hub
+    contract: [approved fields and result size, disclosure controls, source and freshness metadata]
+    note: Query results are disclosures — same handling rules as exports.
+  F4:
+    name: Offline update
+    path: release staging -> approved transfer -> quarantine -> local repository -> local deployment
+    contract: [signature and hash verification, destination binding, compatibility, approval, rollback]
+  F5:
+    name: Offline report
+    path: local summary -> export review -> approved transfer -> enterprise intake
+    contract: [data-owner approval, encryption, integrity, unique bundle ID, provenance, deduplication]
+  F6:
+    name: Recovery copy
+    path: platform -> approved recovery storage or site
+    contract: [encrypted data and recoverable keys, approved location, separate restore authorization]

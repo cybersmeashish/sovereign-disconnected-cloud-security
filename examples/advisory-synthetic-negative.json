@@ -1,0 +1,14 @@
+{
+  "synthetic": true,
+  "collected_at_epoch": 1795013388.464493,
+  "queries": [
+    {
+      "name": "synthetic-parser",
+      "version": "1.0",
+      "query_succeeded": true,
+      "advisory_ids": [
+        "SYNTHETIC-001"
+      ]
+    }
+  ]
+}

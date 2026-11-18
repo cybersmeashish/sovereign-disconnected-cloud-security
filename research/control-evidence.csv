@@ -1,0 +1,15 @@
+control,official_title,deployment_owner,artifact,test_or_evidence,unresolved_gap,assessment_scope
+AC-2,Account Management,Identity owner,lab/identity.py,tests/test_identity.py,Ephemeral authority; durable identity recovery absent,reference assessment aid; no compliance conclusion
+AC-3,Access Enforcement,Application owner,assurance/policy.py,tests/test_assurance_policy.py,Trusted-endpoint model and loopback reference only,reference assessment aid; no compliance conclusion
+AC-4,Information Flow Enforcement,Boundary owner,tools/flow_validator.py,tests/test_flows.py,Contract validation; no physical transfer enforcement,reference assessment aid; no compliance conclusion
+AU-9,Protection of Audit Information,Evidence custodian,assurance/audit.py,tests/test_assurance_policy.py,Trusted checkpoint custody not deployed,reference assessment aid; no compliance conclusion
+AU-12,Audit Record Generation,Monitoring owner,assurance/observability.py,tests/test_assurance_policy.py,Synthetic bounded events; coverage gaps,reference assessment aid; no compliance conclusion
+CM-3,Configuration Change Control,Release owner,assurance/admission.py;assurance/updates.py,tests/test_assurance_crypto.py,No durable signed release journal or power-loss assurance,reference assessment aid; no compliance conclusion
+CP-9,System Backup,Recovery owner,assurance/recovery.py,evidence/2026-11-18/expanded-isolation-report.json,Wrapping material and approval roots separately required,reference assessment aid; no compliance conclusion
+CP-10,System Recovery and Reconstitution,Recovery owner,assurance/recovery.py,evidence/2026-11-18/expanded-isolation-report.json,"Small clean-directory restoration, not site recovery",reference assessment aid; no compliance conclusion
+IA-5,Authenticator Management,Identity owner,lab/identity.py,tests/test_identity.py,No MFA or durable credential store,reference assessment aid; no compliance conclusion
+SC-7,Boundary Protection,Boundary owner,tools/run_isolated_lab.py,evidence/2026-11-18/expanded-isolation-report.json,"Container namespace, no physical air-gap assurance",reference assessment aid; no compliance conclusion
+SC-12,Cryptographic Key Establishment and Management,Key owner,assurance/crypto.py,tests/test_assurance_crypto.py,Software custody; no HSM or durable anti-rollback anchor,reference assessment aid; no compliance conclusion
+SC-13,Cryptographic Protection,Cryptography owner,assurance/crypto.py,evidence/2026-11-18/pq-compatibility-report.json,"Maintained primitives, no FIPS validation",reference assessment aid; no compliance conclusion
+SI-2,Flaw Remediation,Vulnerability owner,assurance/inventory.py,examples/advisory-snapshot.json,Exact-version snapshot subset; age/coverage gaps,reference assessment aid; no compliance conclusion
+SI-7,"Software, Firmware, and Information Integrity",Release owner,assurance/admission.py,tests/test_assurance_crypto.py,Publisher claims are not independent builder attestation,reference assessment aid; no compliance conclusion

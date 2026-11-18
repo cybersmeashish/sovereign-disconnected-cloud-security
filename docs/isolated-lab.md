@@ -1,12 +1,14 @@
 # 06 — Reproducible isolated-site reference lab
 
-The environment uses a digest-pinned official Python 3.12 image, standard-library code, synthetic records, and a loopback-only HTTP service. No packages are downloaded during the lab run.
+The original 01–07 lab uses standard-library code, synthetic records and a loopback-only HTTP service. The expanded image adds hash-locked cryptographic dependencies for 08–28. No packages are downloaded during isolated execution.
 
 ## Prepare while connected
 
 From the repository root, with a running Docker engine:
 
 ```bash
+python3 -m pip install --no-cache-dir --require-hashes -r requirements.lock
+python3 -m tools.prepare_dependencies
 docker pull python:3.12-slim@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b
 docker build --network=none --pull=false -t ashish-sovereign-lab:contributions-01-07 .
 python3 -m unittest discover -s tests -v
@@ -31,6 +33,8 @@ It requires:
 - matching source manifests and a zero container exit status.
 
 The workload exercises three logical Government/BFSI/Oil & Gas fixtures in one container. It is not three independently deployed sovereign sites. The dependency checker supplies modeled outage results; DNS, registries, PKI, monitoring platforms, signature verification and recovery services are not deployed here.
+
+For the later signed-data, monitoring, failure and clean-restore experiments, use the [expanded verification commands](expanded-verification.md). Those bounded reference components remain separate from deployed infrastructure services.
 
 For Podman, build the same image and pass `--runtime podman`. Docker is the observed verification environment; Podman support is an unverified CLI compatibility path.
 

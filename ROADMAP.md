@@ -1,20 +1,19 @@
-# Contribution map
+# Research roadmap
 
-## Delivered reference foundation: 01–07
+## Delivered reference contributions 01–28
 
-Boundary records and three synthetic industries; four connectivity diagrams; threat model; dependency graph and failure analysis; flow-contract checker; reproducible network-disabled container lab; and scoped local identity/authorization.
+[Foundation 01–07](docs/contributions-01-07.md) · [Evidence chain 08–28](docs/contributions-08-28.md) · [Original findings](research/2026-11-18-results.md)
 
-See [completion evidence](docs/contributions-01-07.md). Completion means the stated reference artifacts and observed tests are present. Production controls and organizational adoption require separately evidenced work.
+The repository connects sovereignty boundaries and connectivity to local authorization, signed imports, monitored changes, permitted disclosure, clean recovery, measured toy workloads and industry decision briefs. Completion denotes inspectable reference artifacts and recorded experiments.
 
-## Next work
+## Operational validation priorities
 
-08. Key custody, rotation and recovery records with explicit simulations.
-09. Quarantine-only offline package admission and negative fixtures.
-10. Approved signature-library and provenance verification.
-11. Offline SBOM/advisory snapshots with explicit freshness.
-12. Controlled updates, rollback and recovery exercises.
-13–20. Workload boundaries, local monitoring, reporting freshness, evidence export, audit integrity, incident response, restoration and bounded failure experiments.
-21. Product-specific ingest, search, backlog and recovery benchmarks.
-22–28. Control mappings, placement assurance, provider comparisons, post-quantum dependencies, Sovereign AI, industry cases and original research/decision briefs.
+1. Replace ephemeral identities, signing roots and replay/checkpoint state with reviewed durable services and independently controlled custody.
+2. Validate selected local identity/time/DNS/package/key/monitoring/recovery dependencies in an authorized representative environment.
+3. Exercise stable-media recovery, interrupted power, multi-service rollback and protected anti-rollback state.
+4. Verify workload/backup/evidence/recovery placement through independent evidence and applicable governance.
+5. Integrate real model weights, indexes and tool adapters; measure model behavior separately from authorization.
+6. Validate provider-specific deployments and representative workloads; keep documentation findings separate from own measurements.
+7. Review protocol, certificate and artifact compatibility before adopting post-quantum transitions.
 
-Progressively replace declared model assumptions and ephemeral components with authorized, representative environment evidence.
+No percentile ranking, national accreditation, customer adoption or production assurance is established by reference completion.

@@ -1,0 +1,659 @@
+{
+  "scope": "Declared dependency graph evaluation; no real services were stopped.",
+  "baseline_disconnected": {
+    "schema_version": 1,
+    "stage": "declared dependency model; no environment discovery or availability probe",
+    "disconnected": true,
+    "failed_dependencies": [],
+    "capabilities": [
+      {
+        "id": "local-login",
+        "owner": "synthetic:local-login-owner",
+        "available": true,
+        "blocked_by": []
+      },
+      {
+        "id": "local-read-record",
+        "owner": "synthetic:local-read-record-owner",
+        "available": true,
+        "blocked_by": []
+      },
+      {
+        "id": "local-monitoring",
+        "owner": "synthetic:local-monitoring-owner",
+        "available": true,
+        "blocked_by": []
+      },
+      {
+        "id": "local-rebuild",
+        "owner": "synthetic:local-rebuild-owner",
+        "available": true,
+        "blocked_by": []
+      },
+      {
+        "id": "local-named-service",
+        "owner": "synthetic:local-named-service-owner",
+        "available": true,
+        "blocked_by": []
+      },
+      {
+        "id": "enterprise-visibility",
+        "owner": "synthetic:enterprise-visibility-owner",
+        "available": false,
+        "blocked_by": [
+          "external-hub"
+        ]
+      }
+    ]
+  },
+  "failures": {
+    "local-time": {
+      "schema_version": 1,
+      "stage": "declared dependency model; no environment discovery or availability probe",
+      "disconnected": true,
+      "failed_dependencies": [
+        "local-time"
+      ],
+      "capabilities": [
+        {
+          "id": "local-login",
+          "owner": "synthetic:local-login-owner",
+          "available": false,
+          "blocked_by": [
+            "local-time"
+          ]
+        },
+        {
+          "id": "local-read-record",
+          "owner": "synthetic:local-read-record-owner",
+          "available": false,
+          "blocked_by": [
+            "local-time"
+          ]
+        },
+        {
+          "id": "local-monitoring",
+          "owner": "synthetic:local-monitoring-owner",
+          "available": false,
+          "blocked_by": [
+            "local-time"
+          ]
+        },
+        {
+          "id": "local-rebuild",
+          "owner": "synthetic:local-rebuild-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-named-service",
+          "owner": "synthetic:local-named-service-owner",
+          "available": false,
+          "blocked_by": [
+            "local-time"
+          ]
+        },
+        {
+          "id": "enterprise-visibility",
+          "owner": "synthetic:enterprise-visibility-owner",
+          "available": false,
+          "blocked_by": [
+            "external-hub"
+          ]
+        }
+      ]
+    },
+    "local-identity-state": {
+      "schema_version": 1,
+      "stage": "declared dependency model; no environment discovery or availability probe",
+      "disconnected": true,
+      "failed_dependencies": [
+        "local-identity-state"
+      ],
+      "capabilities": [
+        {
+          "id": "local-login",
+          "owner": "synthetic:local-login-owner",
+          "available": false,
+          "blocked_by": [
+            "local-identity-state"
+          ]
+        },
+        {
+          "id": "local-read-record",
+          "owner": "synthetic:local-read-record-owner",
+          "available": false,
+          "blocked_by": [
+            "local-identity-state"
+          ]
+        },
+        {
+          "id": "local-monitoring",
+          "owner": "synthetic:local-monitoring-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-rebuild",
+          "owner": "synthetic:local-rebuild-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-named-service",
+          "owner": "synthetic:local-named-service-owner",
+          "available": false,
+          "blocked_by": [
+            "local-identity-state"
+          ]
+        },
+        {
+          "id": "enterprise-visibility",
+          "owner": "synthetic:enterprise-visibility-owner",
+          "available": false,
+          "blocked_by": [
+            "external-hub"
+          ]
+        }
+      ]
+    },
+    "local-identity": {
+      "schema_version": 1,
+      "stage": "declared dependency model; no environment discovery or availability probe",
+      "disconnected": true,
+      "failed_dependencies": [
+        "local-identity"
+      ],
+      "capabilities": [
+        {
+          "id": "local-login",
+          "owner": "synthetic:local-login-owner",
+          "available": false,
+          "blocked_by": [
+            "local-identity"
+          ]
+        },
+        {
+          "id": "local-read-record",
+          "owner": "synthetic:local-read-record-owner",
+          "available": false,
+          "blocked_by": [
+            "local-identity"
+          ]
+        },
+        {
+          "id": "local-monitoring",
+          "owner": "synthetic:local-monitoring-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-rebuild",
+          "owner": "synthetic:local-rebuild-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-named-service",
+          "owner": "synthetic:local-named-service-owner",
+          "available": false,
+          "blocked_by": [
+            "local-identity"
+          ]
+        },
+        {
+          "id": "enterprise-visibility",
+          "owner": "synthetic:enterprise-visibility-owner",
+          "available": false,
+          "blocked_by": [
+            "external-hub"
+          ]
+        }
+      ]
+    },
+    "local-record-store": {
+      "schema_version": 1,
+      "stage": "declared dependency model; no environment discovery or availability probe",
+      "disconnected": true,
+      "failed_dependencies": [
+        "local-record-store"
+      ],
+      "capabilities": [
+        {
+          "id": "local-login",
+          "owner": "synthetic:local-login-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-read-record",
+          "owner": "synthetic:local-read-record-owner",
+          "available": false,
+          "blocked_by": [
+            "local-record-store"
+          ]
+        },
+        {
+          "id": "local-monitoring",
+          "owner": "synthetic:local-monitoring-owner",
+          "available": false,
+          "blocked_by": [
+            "local-record-store"
+          ]
+        },
+        {
+          "id": "local-rebuild",
+          "owner": "synthetic:local-rebuild-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-named-service",
+          "owner": "synthetic:local-named-service-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "enterprise-visibility",
+          "owner": "synthetic:enterprise-visibility-owner",
+          "available": false,
+          "blocked_by": [
+            "external-hub"
+          ]
+        }
+      ]
+    },
+    "local-dns": {
+      "schema_version": 1,
+      "stage": "declared dependency model; no environment discovery or availability probe",
+      "disconnected": true,
+      "failed_dependencies": [
+        "local-dns"
+      ],
+      "capabilities": [
+        {
+          "id": "local-login",
+          "owner": "synthetic:local-login-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-read-record",
+          "owner": "synthetic:local-read-record-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-monitoring",
+          "owner": "synthetic:local-monitoring-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-rebuild",
+          "owner": "synthetic:local-rebuild-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-named-service",
+          "owner": "synthetic:local-named-service-owner",
+          "available": false,
+          "blocked_by": [
+            "local-dns"
+          ]
+        },
+        {
+          "id": "enterprise-visibility",
+          "owner": "synthetic:enterprise-visibility-owner",
+          "available": false,
+          "blocked_by": [
+            "external-hub"
+          ]
+        }
+      ]
+    },
+    "local-telemetry": {
+      "schema_version": 1,
+      "stage": "declared dependency model; no environment discovery or availability probe",
+      "disconnected": true,
+      "failed_dependencies": [
+        "local-telemetry"
+      ],
+      "capabilities": [
+        {
+          "id": "local-login",
+          "owner": "synthetic:local-login-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-read-record",
+          "owner": "synthetic:local-read-record-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-monitoring",
+          "owner": "synthetic:local-monitoring-owner",
+          "available": false,
+          "blocked_by": [
+            "local-telemetry"
+          ]
+        },
+        {
+          "id": "local-rebuild",
+          "owner": "synthetic:local-rebuild-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-named-service",
+          "owner": "synthetic:local-named-service-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "enterprise-visibility",
+          "owner": "synthetic:enterprise-visibility-owner",
+          "available": false,
+          "blocked_by": [
+            "external-hub"
+          ]
+        }
+      ]
+    },
+    "local-package-cache": {
+      "schema_version": 1,
+      "stage": "declared dependency model; no environment discovery or availability probe",
+      "disconnected": true,
+      "failed_dependencies": [
+        "local-package-cache"
+      ],
+      "capabilities": [
+        {
+          "id": "local-login",
+          "owner": "synthetic:local-login-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-read-record",
+          "owner": "synthetic:local-read-record-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-monitoring",
+          "owner": "synthetic:local-monitoring-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-rebuild",
+          "owner": "synthetic:local-rebuild-owner",
+          "available": false,
+          "blocked_by": [
+            "local-package-cache"
+          ]
+        },
+        {
+          "id": "local-named-service",
+          "owner": "synthetic:local-named-service-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "enterprise-visibility",
+          "owner": "synthetic:enterprise-visibility-owner",
+          "available": false,
+          "blocked_by": [
+            "external-hub"
+          ]
+        }
+      ]
+    },
+    "local-trust-material": {
+      "schema_version": 1,
+      "stage": "declared dependency model; no environment discovery or availability probe",
+      "disconnected": true,
+      "failed_dependencies": [
+        "local-trust-material"
+      ],
+      "capabilities": [
+        {
+          "id": "local-login",
+          "owner": "synthetic:local-login-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-read-record",
+          "owner": "synthetic:local-read-record-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-monitoring",
+          "owner": "synthetic:local-monitoring-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-rebuild",
+          "owner": "synthetic:local-rebuild-owner",
+          "available": false,
+          "blocked_by": [
+            "local-trust-material"
+          ]
+        },
+        {
+          "id": "local-named-service",
+          "owner": "synthetic:local-named-service-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "enterprise-visibility",
+          "owner": "synthetic:enterprise-visibility-owner",
+          "available": false,
+          "blocked_by": [
+            "external-hub"
+          ]
+        }
+      ]
+    },
+    "external-hub": {
+      "schema_version": 1,
+      "stage": "declared dependency model; no environment discovery or availability probe",
+      "disconnected": true,
+      "failed_dependencies": [
+        "external-hub"
+      ],
+      "capabilities": [
+        {
+          "id": "local-login",
+          "owner": "synthetic:local-login-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-read-record",
+          "owner": "synthetic:local-read-record-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-monitoring",
+          "owner": "synthetic:local-monitoring-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-rebuild",
+          "owner": "synthetic:local-rebuild-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-named-service",
+          "owner": "synthetic:local-named-service-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "enterprise-visibility",
+          "owner": "synthetic:enterprise-visibility-owner",
+          "available": false,
+          "blocked_by": [
+            "external-hub"
+          ]
+        }
+      ]
+    },
+    "external-idp": {
+      "schema_version": 1,
+      "stage": "declared dependency model; no environment discovery or availability probe",
+      "disconnected": true,
+      "failed_dependencies": [
+        "external-idp"
+      ],
+      "capabilities": [
+        {
+          "id": "local-login",
+          "owner": "synthetic:local-login-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-read-record",
+          "owner": "synthetic:local-read-record-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-monitoring",
+          "owner": "synthetic:local-monitoring-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-rebuild",
+          "owner": "synthetic:local-rebuild-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-named-service",
+          "owner": "synthetic:local-named-service-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "enterprise-visibility",
+          "owner": "synthetic:enterprise-visibility-owner",
+          "available": false,
+          "blocked_by": [
+            "external-hub"
+          ]
+        }
+      ]
+    },
+    "external-registry": {
+      "schema_version": 1,
+      "stage": "declared dependency model; no environment discovery or availability probe",
+      "disconnected": true,
+      "failed_dependencies": [
+        "external-registry"
+      ],
+      "capabilities": [
+        {
+          "id": "local-login",
+          "owner": "synthetic:local-login-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-read-record",
+          "owner": "synthetic:local-read-record-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-monitoring",
+          "owner": "synthetic:local-monitoring-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-rebuild",
+          "owner": "synthetic:local-rebuild-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-named-service",
+          "owner": "synthetic:local-named-service-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "enterprise-visibility",
+          "owner": "synthetic:enterprise-visibility-owner",
+          "available": false,
+          "blocked_by": [
+            "external-hub"
+          ]
+        }
+      ]
+    },
+    "external-license-service": {
+      "schema_version": 1,
+      "stage": "declared dependency model; no environment discovery or availability probe",
+      "disconnected": true,
+      "failed_dependencies": [
+        "external-license-service"
+      ],
+      "capabilities": [
+        {
+          "id": "local-login",
+          "owner": "synthetic:local-login-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-read-record",
+          "owner": "synthetic:local-read-record-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-monitoring",
+          "owner": "synthetic:local-monitoring-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-rebuild",
+          "owner": "synthetic:local-rebuild-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "local-named-service",
+          "owner": "synthetic:local-named-service-owner",
+          "available": true,
+          "blocked_by": []
+        },
+        {
+          "id": "enterprise-visibility",
+          "owner": "synthetic:enterprise-visibility-owner",
+          "available": false,
+          "blocked_by": [
+            "external-hub"
+          ]
+        }
+      ]
+    }
+  }
+}

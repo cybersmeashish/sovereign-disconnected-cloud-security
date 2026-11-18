@@ -1,0 +1,19 @@
+{
+  "observed_date": "2026-11-18",
+  "unique_suite_cases": 101,
+  "retained_original_tests": 56,
+  "new_assurance_tests": 45,
+  "environments": {
+    "host": {
+      "unique_tests": 101,
+      "elapsed_seconds": 6.75,
+      "result": "OK"
+    },
+    "container": {
+      "unique_tests": 101,
+      "elapsed_seconds": 8.089,
+      "result": "OK"
+    }
+  },
+  "scope": "Repeated execution of the same 101 cases; counts are not additive across environments."
+}

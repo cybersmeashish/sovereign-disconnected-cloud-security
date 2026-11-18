@@ -1,0 +1,18 @@
+{
+  "samples_seconds": [
+    0.0005235839998931624,
+    0.0004852090005442733,
+    0.00047516700033156667,
+    0.00046008400022401474,
+    0.0004693339997174917
+  ],
+  "restored_records": 3,
+  "lost_post_snapshot_records": 1,
+  "dependencies": [
+    "separate wrapping material",
+    "pinned approval public keys",
+    "Python packages",
+    "clean writable storage"
+  ],
+  "scope": "config/data/software-key fixture, not whole-site RTO/RPO"
+}

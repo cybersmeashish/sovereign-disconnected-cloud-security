@@ -1,0 +1,29 @@
+{
+  "collected_at": "2026-11-18T14:49:48.464493+00:00",
+  "collected_at_epoch": 1795013388.464493,
+  "source": "GitHub global reviewed advisory API, exact-version package queries",
+  "queries": [
+    {
+      "name": "cryptography",
+      "version": "50.0.2",
+      "query_succeeded": true,
+      "advisory_ids": [],
+      "source_url": "https://api.github.com/advisories?type=reviewed&ecosystem=pip&affects=cryptography%4050.0.2&per_page=100"
+    },
+    {
+      "name": "cffi",
+      "version": "2.1.1",
+      "query_succeeded": true,
+      "advisory_ids": [],
+      "source_url": "https://api.github.com/advisories?type=reviewed&ecosystem=pip&affects=cffi%402.1.1&per_page=100"
+    },
+    {
+      "name": "pycparser",
+      "version": "3.12",
+      "query_succeeded": true,
+      "advisory_ids": [],
+      "source_url": "https://api.github.com/advisories?type=reviewed&ecosystem=pip&affects=pycparser%403.12&per_page=100"
+    }
+  ],
+  "limits": "Package subset and point-in-time catalog queries; not vulnerability absence."
+}

@@ -7,8 +7,8 @@ def source_manifest(root):
     root = Path(root)
     paths = set()
     for pattern in (
-        "lab/**/*.py", "tools/**/*.py", "tests/**/*.py",
-        "architecture/*.json", "examples/**/*.json", "Dockerfile",
+        "lab/**/*.py", "assurance/**/*.py", "tools/**/*.py", "tests/**/*.py",
+        "architecture/*.json", "examples/**/*.json", "Dockerfile", "requirements.lock",
     ):
         paths.update(path for path in root.glob(pattern) if path.is_file())
     return {path.relative_to(root).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()

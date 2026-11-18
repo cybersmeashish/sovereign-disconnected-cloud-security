@@ -1,0 +1,18 @@
+{
+  "site": "government",
+  "architecture": "portable",
+  "builder": "synthetic-local-builder",
+  "release_keys": {
+    "release": "rznV6X0axITAkDLxfh3qNo2c72JHO8Y1yGGXTxyKYuo="
+  },
+  "approval_policy": {
+    "security": {
+      "public": "dCrNtwV233UbJo0wIqCTKiYhf6495PHBo/4huX5FxSw=",
+      "duty": "security"
+    },
+    "operations": {
+      "public": "2rrp5KpNaiNYE0ejZbLc3dG3GQhjfmiACa7HLdEiPw0=",
+      "duty": "operations"
+    }
+  }
+}

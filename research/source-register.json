@@ -1,0 +1,86 @@
+{
+  "retrieved_date": "2026-11-18",
+  "source_snapshots": [
+    {
+      "snapshot": "aws-outposts",
+      "sha256": "9c76f95f8ccc4893588dbdf15f74c72030cf55010872c5e23304507948751cfa",
+      "bytes": 23720,
+      "captured_date": "2026-11-18",
+      "raw_source_committed": false,
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/data-residency-hybrid-cloud-services-lens/drhcrel05-bp04.html"
+    },
+    {
+      "snapshot": "controls",
+      "sha256": "64ca6b4161de51ab6af098a7d101d326f14c95e1abf721396cd8a049e8115eeb",
+      "bytes": 10448237,
+      "captured_date": "2026-11-18",
+      "raw_source_committed": false,
+      "url": "https://raw.githubusercontent.com/usnistgov/oscal-content/main/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json"
+    },
+    {
+      "snapshot": "gdc-operations",
+      "sha256": "71304d787ad19188d3ae9d743845573561d0cbfd1b4d098c73694ba2d0d71387",
+      "bytes": 298954,
+      "captured_date": "2026-11-18",
+      "raw_source_committed": false,
+      "url": "https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/security-operations"
+    },
+    {
+      "snapshot": "gdc",
+      "sha256": "69221669fa388058da550bb5ae997b55c1c6f8db55e0058f31eeb3ef886cf714",
+      "bytes": 310747,
+      "captured_date": "2026-11-18",
+      "raw_source_committed": false,
+      "url": "https://docs.cloud.google.com/distributed-cloud/hosted/docs/latest/gdcag/security"
+    },
+    {
+      "snapshot": "nist203",
+      "sha256": "caa360351510a649d67d08574f33bd19d694a497c6aa9efeaef6adf4a4c81064",
+      "bytes": 46318,
+      "captured_date": "2026-11-18",
+      "raw_source_committed": false,
+      "url": "https://csrc.nist.gov/pubs/fips/203/final"
+    },
+    {
+      "snapshot": "nist204",
+      "sha256": "d335a315dcbfab5728ff3411051a3b52a915719eb900aa9e3a9b5cf38927fb20",
+      "bytes": 45035,
+      "captured_date": "2026-11-18",
+      "raw_source_committed": false,
+      "url": "https://csrc.nist.gov/pubs/fips/204/final"
+    },
+    {
+      "snapshot": "openssl-encap",
+      "sha256": "c965ee29e8f609f7e5d21f47f0f28f2cad9d55f1f85527576b84d5ed19a31997",
+      "bytes": 78088,
+      "captured_date": "2026-11-18",
+      "raw_source_committed": false,
+      "url": "https://docs.openssl.org/3.6/man1/openssl-pkeyutl/"
+    },
+    {
+      "snapshot": "placement",
+      "sha256": "2718c187b4f876f619fe2187fc3cc434c1adc49681846e31d21d93c39a37a233",
+      "bytes": 50761,
+      "captured_date": "2026-11-18",
+      "raw_source_committed": false,
+      "url": "https://csrc.nist.gov/pubs/sp/1800/19/iprd"
+    },
+    {
+      "snapshot": "slsa",
+      "sha256": "f811f12c9b10b620041192313f893a2e58407167e4a8a26654743d018286917c",
+      "bytes": 34969,
+      "captured_date": "2026-11-18",
+      "raw_source_committed": false,
+      "url": "https://slsa.dev/spec/v1.0/verifying-artifacts"
+    }
+  ],
+  "nist_placement_status": "Supplied 2020 preliminary draft identifies itself as obsoleted by a 2021 draft. Candidate newer-page requests returned HTTP 403; current final status was not established.",
+  "catalog_source": "https://raw.githubusercontent.com/usnistgov/oscal-content/main/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json",
+  "package_metadata_sources": [
+    "https://pypi.org/pypi/cryptography/50.0.2/json",
+    "https://pypi.org/pypi/cffi/2.1.1/json",
+    "https://pypi.org/pypi/pycparser/3.12/json"
+  ],
+  "package_hash_snapshot": "../requirements.lock",
+  "limits": "Hashes identify retrieved source bytes; they are not publisher attestations. See linked primary pages and their publication status."
+}

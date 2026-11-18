@@ -2,6 +2,8 @@
 
 Observed **18 November 2026**.
 
+This page preserves the first 01–07 delivery record. The [later 08–28 verification](expanded-verification.md) records the expanded 99-case suite, 77 scenarios and six host PQ/interop checks.
+
 ## Recorded results
 
 | Check | Actual observation |

@@ -1,0 +1,7 @@
+dependency,purpose,current_reference,transition_candidate,observed_compatibility,open_gate
+communications,key establishment,No TLS deployed,ML-KEM/hybrid protocol via maintained implementation,OpenSSL ML-KEM-768 positive/tampered ciphertext,Protocol negotiation and downgrade/TLS compatibility
+artifact approvals,signature,Ed25519,ML-DSA,OpenSSL ML-DSA-65 positive/altered/wrong key,"Bundle format, root distribution and signer interoperability"
+identity certificates,authentication signature,Synthetic Ed25519 expiry fixture,Protocol-supported PQ/hybrid identity,No PQ certificate migration tested,CA/client/validator compatibility
+audit checkpoints,signature,Ed25519,ML-DSA or reviewed alternative,Classical cryptography/OpenSSL Ed25519 interoperability,Long-term verification and trust-root lifecycle
+backups,data encryption/key wrapping,AES-256-GCM software material,Review symmetric protection and establishment of wrapping keys,Reference recovery only,"Custody, entropy, wrapping-key delivery and durable recovery"
+firmware/update ecosystems,signature,Synthetic package verifier,Maintained ecosystem-compatible PQ signing,No firmware or SLH-DSA test,"Vendor signing, boot-chain and operational compatibility"

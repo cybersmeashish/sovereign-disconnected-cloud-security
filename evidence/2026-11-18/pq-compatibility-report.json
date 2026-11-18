@@ -1,0 +1,39 @@
+{
+  "openssl": "OpenSSL 3.6.3 9 Jun 2026 (Library: OpenSSL 3.6.3 9 Jun 2026)",
+  "environment": {
+    "system": "Darwin",
+    "machine": "arm64"
+  },
+  "cases": [
+    {
+      "id": "mlkem_roundtrip",
+      "passed": true,
+      "shared_secret_bytes": 32,
+      "ciphertext_bytes": 1088
+    },
+    {
+      "id": "mlkem_altered_ciphertext",
+      "passed": true,
+      "observation": "error or a different secret; implicit rejection may return success"
+    },
+    {
+      "id": "mldsa_roundtrip",
+      "passed": true,
+      "signature_bytes": 3309
+    },
+    {
+      "id": "mldsa_altered_message",
+      "passed": true
+    },
+    {
+      "id": "mldsa_unexpected_key",
+      "passed": true
+    },
+    {
+      "id": "ed25519_cryptography_openssl_interop",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "limits": "Host CLI experiments only. No TLS/hybrid integration, certificate migration, SLH-DSA test, production deployment or FIPS validation. Ephemeral keys and shared secrets are deleted."
+}

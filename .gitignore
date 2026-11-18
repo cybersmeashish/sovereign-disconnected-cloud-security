@@ -5,3 +5,4 @@ __pycache__/
 evidence/local/
 evidence/ci/
 .DS_Store
+vendor/wheels/

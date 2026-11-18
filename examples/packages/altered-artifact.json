@@ -1,0 +1,55 @@
+{
+  "synthetic": true,
+  "candidate": {
+    "manifest": {
+      "schema_version": 1,
+      "release_id": "fixture-v1",
+      "version": 1,
+      "site": "government",
+      "architecture": "portable",
+      "kind": "application",
+      "payload_sha256": "b0b638d6c9ade3156ea724e5a994d95917bb3519b920b025c9db083069675fbf",
+      "provenance": {
+        "_type": "https://in-toto.io/Statement/v1",
+        "subject": [
+          {
+            "name": "application",
+            "digest": {
+              "sha256": "b0b638d6c9ade3156ea724e5a994d95917bb3519b920b025c9db083069675fbf"
+            }
+          }
+        ],
+        "predicateType": "https://slsa.dev/provenance/v1",
+        "predicate": {
+          "buildDefinition": {
+            "buildType": "synthetic-fixture-v1",
+            "externalParameters": {
+              "site": "government",
+              "architecture": "portable"
+            }
+          },
+          "runDetails": {
+            "builder": {
+              "id": "synthetic-local-builder"
+            }
+          }
+        }
+      }
+    },
+    "payload": "dGFtcGVyZWQ=",
+    "signature": {
+      "key_id": "release",
+      "signature": "GWa6/y6aM6BdVZAbwcZy6i7aw4QD5OeT31qQs74NObK170lkCMgwaQe198WsijWJniz274HhO24a+aUnzQOjBQ=="
+    }
+  },
+  "approvals": [
+    {
+      "key_id": "security",
+      "signature": "ih5KeCMztLiJo0bmGN7rYGvGj5tiVXGmGPzSdaYwMkJXjIvAoAPXCsoHh/S4EnHo7u4etGRGZ0Dlb6+sifsVCg=="
+    },
+    {
+      "key_id": "operations",
+      "signature": "3azRvqa+3BUVoUTu+1GvuTGYD+HAZ1GSQgjRytHjQu1jw9SCexbD9nkc9qBG4lvj5XTSPoLd89vhc5QJw6YICA=="
+    }
+  ]
+}

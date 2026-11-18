@@ -11,3 +11,5 @@
 | Capacity | Replay a representative authorized workload against the selected products | Measured ingest, backlog, search behavior, recovery and resource use |
 
 These are proposed gates. The capacity calculation's local tests do not establish these operational outcomes.
+
+[Contributions 08–28](contributions-08-28.md) now supply bounded reference exercises and measured outcomes for these decisions. Operational acceptance still requires representative infrastructure, appointed owners, durable trust/freshness state and environment-specific evidence.

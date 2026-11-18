@@ -20,16 +20,23 @@ def command(runtime, *args, timeout=120):
     return result.stdout
 
 
-def run(runtime, image):
+def run(runtime, image, expanded=False):
     container_id = None
     name = "ashish-sovereign-lab-" + uuid.uuid4().hex[:12]
     try:
-        container_id = command(
-            runtime, "create", "--name", name, "--network", "none",
+        create_args = [
+            "create", "--name", name, "--network", "none",
             "--read-only", "--cap-drop", "ALL", "--security-opt", "no-new-privileges",
             "--pids-limit", "64", "--memory", "256m", "--cpus", "1",
-            image, "python", "-m", "lab.run", "--require-isolation",
-        ).strip()
+        ]
+        if expanded:
+            create_args += [
+                "--tmpfs", "/lab-state:rw,nodev,nosuid,noexec,size=32m,uid=65532,gid=65532",
+                "--tmpfs", "/faults:rw,nodev,nosuid,noexec,size=64k,uid=65532,gid=65532",
+            ]
+        create_args += [image, "python", "-m", "assurance.run" if expanded else "lab.run",
+                        "--require-isolation"]
+        container_id = command(runtime, *create_args).strip()
         config = json.loads(command(runtime, "inspect", container_id))[0]
         lab_result = json.loads(command(runtime, "start", "-a", container_id))
         after = json.loads(command(runtime, "inspect", container_id))[0]
@@ -43,6 +50,8 @@ def run(runtime, image):
             "user": config["Config"]["User"],
             "memory_bytes": host.get("Memory"),
             "pids_limit": host.get("PidsLimit"),
+            "nano_cpus": host.get("NanoCpus"),
+            "tmpfs": host.get("Tmpfs", {}),
             "image_id": config["Image"],
             "exit_code": after["State"]["ExitCode"],
         }
@@ -53,6 +62,8 @@ def run(runtime, image):
             and constraints["read_only_root"] and constraints["no_new_privileges"]
             and "ALL" in constraints["dropped_capabilities"]
             and constraints["user"] == "65532:65532"
+            and constraints["memory_bytes"] == 268435456
+            and constraints["pids_limit"] == 64 and constraints["nano_cpus"] == 1_000_000_000
             and constraints["exit_code"] == 0 and match
         )
         return {
@@ -75,10 +86,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--runtime", choices=("docker", "podman"), default="docker")
     parser.add_argument("--image", default="ashish-sovereign-lab:contributions-01-07")
+    parser.add_argument("--expanded", action="store_true")
     parser.add_argument("--output", type=Path, default=ROOT / "evidence/local/isolation-report.json")
     args = parser.parse_args()
     try:
-        report = run(args.runtime, args.image)
+        report = run(args.runtime, args.image, args.expanded)
     except (OSError, ValueError, KeyError, RuntimeError, subprocess.TimeoutExpired) as error:
         parser.exit(1, f"Lab verification failed: {error}\n")
     args.output.parent.mkdir(parents=True, exist_ok=True)

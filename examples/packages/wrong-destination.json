@@ -1,0 +1,55 @@
+{
+  "synthetic": true,
+  "candidate": {
+    "manifest": {
+      "schema_version": 1,
+      "release_id": "wrong-site",
+      "version": 1,
+      "site": "bfsi",
+      "architecture": "portable",
+      "kind": "application",
+      "payload_sha256": "3a6eb0790f39ac87c94f3856b2dd2c5d110e6811602261a9a923d3bb23adc8b7",
+      "provenance": {
+        "_type": "https://in-toto.io/Statement/v1",
+        "subject": [
+          {
+            "name": "application",
+            "digest": {
+              "sha256": "3a6eb0790f39ac87c94f3856b2dd2c5d110e6811602261a9a923d3bb23adc8b7"
+            }
+          }
+        ],
+        "predicateType": "https://slsa.dev/provenance/v1",
+        "predicate": {
+          "buildDefinition": {
+            "buildType": "synthetic-fixture-v1",
+            "externalParameters": {
+              "site": "bfsi",
+              "architecture": "portable"
+            }
+          },
+          "runDetails": {
+            "builder": {
+              "id": "synthetic-local-builder"
+            }
+          }
+        }
+      }
+    },
+    "payload": "ZGF0YQ==",
+    "signature": {
+      "key_id": "release",
+      "signature": "2A+kfBXt6Oa9lFJxWlHiT/khSFQFoQ5r+tbRKN4RdPlVZ2IcaMb0T8axtS5MDmUVPzCCRIashiX1P5KsybBbBg=="
+    }
+  },
+  "approvals": [
+    {
+      "key_id": "security",
+      "signature": "gqavCLfBQb6eLP+mRv/ToEYBhl+hm5uDXDo7V/9dv0M1NOmD1tAN+mzCWqtuFYVfwIlJZMDEzq+vQCTByFuNDA=="
+    },
+    {
+      "key_id": "operations",
+      "signature": "tA7m5u94X1Plp5d993F/ii8jxFia+U7qvZUzEGv67PficI0D5WYIAGZDbeX112M5ZwCj6snorbt7DhESEGLMDA=="
+    }
+  ]
+}

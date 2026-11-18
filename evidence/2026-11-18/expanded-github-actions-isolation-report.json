@@ -1,0 +1,1097 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-11-18T15:27:38.321340+00:00",
+  "scope": "Synthetic reference lab, Docker/Podman network namespace",
+  "runtime": "docker",
+  "constraints": {
+    "network_mode": "none",
+    "read_only_root": true,
+    "dropped_capabilities": [
+      "ALL"
+    ],
+    "no_new_privileges": true,
+    "user": "65532:65532",
+    "memory_bytes": 268435456,
+    "pids_limit": 64,
+    "nano_cpus": 1000000000,
+    "tmpfs": {
+      "/faults": "rw,nodev,nosuid,noexec,size=64k,uid=65532,gid=65532",
+      "/lab-state": "rw,nodev,nosuid,noexec,size=32m,uid=65532,gid=65532"
+    },
+    "image_id": "sha256:19dc6abd299771ca3d9b60f18421a4b0279f73a74c726f7cb26824dad056b298",
+    "exit_code": 0
+  },
+  "source_matches_image": true,
+  "source_manifest": {
+    "Dockerfile": "a7cb81448165819f5ff9acdba8b409e44d3d2e712bcc98f6667277ca158d586b",
+    "architecture/flow-register.json": "290531cd0c74663a2893eaa9c2edd4af8af7eff421a2465be476c7297d8c970d",
+    "assurance/__init__.py": "617e4989addec2744d4d5a4e8a7ee405a0ad85910502f5df81e60d32a983dbb3",
+    "assurance/admission.py": "2da245074b2671d2272a4e5ad890609b8a471cb4969e5fe5ef224428c62b47de",
+    "assurance/audit.py": "287cee6cfb409f4909c2fe442e202dccdad42b804a872485079e01796154254e",
+    "assurance/crypto.py": "8cfadfad203f81423e851e8b4425d0270edf3b7bcf6914ff03440937e0fe7ed8",
+    "assurance/inventory.py": "29db809c08bbd245e016d0756f48c2e99cf9998d13f39f71ffcd914c554716db",
+    "assurance/observability.py": "255a8ff8c1e15e078a318aeeb8b9c84ce18d0a254a605c4e2269c4bf2995cfc7",
+    "assurance/policy.py": "11eabdaaa8d5b3d4a85eb60bfda7f4462f3430fb7cd1e28b3db7be8494c2f31b",
+    "assurance/recovery.py": "d129236b6501f56de8b20920db03c416055bb94b01d8a895860d1180dc141d81",
+    "assurance/run.py": "137f2f094567865bc60d3ca29605a621b641f7f9271ca189f21cf1e2f62cca8d",
+    "assurance/updates.py": "ee46227c06dfeb1effef947ae6f9f2b68977a9c205cb3f6d83bdcca5c6736fe0",
+    "examples/advisory-snapshot.json": "715e575b44b50d4414363fb9389695946fb9c4f4d5ab91486afc47e0ef6888c6",
+    "examples/advisory-synthetic-negative.json": "41e2aa84ed4c897169b07ebc77dc30df7e998e0e5b9937bbea2014013d3cbf47",
+    "examples/boundaries/bfsi.json": "18d275f366f043050d5e2f57559d664162b13abd478c39d0c4d5978a92a6ea22",
+    "examples/boundaries/government.json": "4b0eea90babcf1d39ea9f5532e8c6a00e63418029ee77684a3d410c84867a845",
+    "examples/boundaries/oil-gas.json": "31c89ec3b8f2d7f861c85d830eb66988cee93ac6f3dfd9e6c695c3252be38422",
+    "examples/dependencies-external-only.json": "27e44e0f7909a718e56bc9195f711a994d5fcdede86d67d62da638b8274f2cae",
+    "examples/dependencies.json": "03d14c2f0a82ed074e9f620ad06acd480f6746104bee092ee472af3ee2c1f5f0",
+    "examples/packages/altered-artifact.json": "ef260328cb591c4b9b688e3be65c86ba5d9cc388fe443c00ee2d4e6f2e323c15",
+    "examples/packages/missing-approval.json": "7095d497e2982a75fe671ff62c19735b9022d8172b3a4169140d3ceb2a1a97bd",
+    "examples/packages/provenance-digest-mismatch.json": "300beeffc5c7de405049cbe8d4f22607cc2dc187bae1d8594ad18f110c4fd33b",
+    "examples/packages/trust-policy.json": "30f9501ffb4f66979fa73e21747bd587296adb178fe003c5339af2e91cb4fee0",
+    "examples/packages/unexpected-signer.json": "e491244a0cd23d463813716324ce86fd12bed10e3d0fc7d1bec5378e497d8628",
+    "examples/packages/valid.json": "ba007d25f826bc54488e0f55a2d3e85c1a0112b0d210cd54bd3a0ac3c4fe6a4c",
+    "examples/packages/wrong-architecture.json": "9b89bf9e75b6ce6ab436f321fbf95d1f13628bb41beae5722682f5fca389ddaa",
+    "examples/packages/wrong-destination.json": "7b0e04483fa6d4f29d18932c64292ee83787ac707d5160b48fefbaec5ceed28c",
+    "examples/sbom.cdx.json": "ecace9a3f51bdb3293e84309095c6aee07e913c066be1577719d801806d3b0b5",
+    "lab/__init__.py": "561c6591c241620800337840add1d3f3c5baa948c57f2bd3f4c301ab5295d727",
+    "lab/fixtures.py": "50198ccd7270f104718037c80d277607455411092dedd6ce6b5e2d7cb44554fc",
+    "lab/identity.py": "2beec24597d4d526a10d95b22aa1a9bae7d7ce3aab4707a2a2cf429eba75314a",
+    "lab/run.py": "b88e3d558f806718e23c915cb43fcadfa37b4469921d6434e7a6e984c83320ea",
+    "lab/service.py": "15dc261da5af5ccf83722581645803a298e1bfd480dd77386d1de16cba2a07f0",
+    "requirements.lock": "c5f30a7ce5ac66cfabe098d21bd12658219ce7cc0afb4930f41e0fcfd52ad0f2",
+    "tests/__init__.py": "f3024b8fb59f24b389c502012257c4a8479a3af4296b890dfad81d24a1290e3e",
+    "tests/test_assurance_crypto.py": "3a7622c981977e65dea77ca67b0829616aa9f36f1b8f90ba63550c8a3ba7b16f",
+    "tests/test_assurance_policy.py": "82e2f3ee94b6902900806e3866a266dc1412e9802add02bf0ad8cda8a28b4a2c",
+    "tests/test_capacity_model.py": "0fef2da730481a6e615167e7806143e4ebeeb84e7ef0a087b2cb8235b70c5e42",
+    "tests/test_dependencies.py": "fff91bbe45b3a84911fa96e7c145a5ff533c68f92ba0deb0a50e16ae3998db0b",
+    "tests/test_flows.py": "4c9880d3bee9af6c694eada4b3447c1cfc804deb8e7d4e7b8b33d5cd1cdf5714",
+    "tests/test_identity.py": "fe8f7e84ef930224ac27ac8bc25d86286fd79a1c2f4043b907e25f242f046d12",
+    "tests/test_service.py": "19c512ab6dfb71900492a0e83bdc539c3ed6e6054c48da75c5a7252fdceb0cd1",
+    "tools/__init__.py": "41d1987e9c6c3883c4ee94ca21ba9f45659acb6eea759de20409347d956b240e",
+    "tools/admit_fixture.py": "7ad375eb302cf6d1cd7416e92534882bec861593f519b01fc1a2d5d86a6c3e76",
+    "tools/benchmark.py": "eaa8d193cf5e13f71fdfebcad876fe71a25d89564eec6ee6c879c641059871cc",
+    "tools/capacity_model.py": "0e095ab21f6dc8317aa611f0da78f85645d2da6bafb2f36ec488015457157bdb",
+    "tools/dependency_analyzer.py": "90d7097de8956227856535be8949849604d9aac0dfece2087cc5572d85b0e837",
+    "tools/flow_validator.py": "fa58ccafe58e36fef3daac9c4922b9d67e2759819e87eed96ddbf19fc1ccec29",
+    "tools/pq_compatibility.py": "3087da7c754da72aa6b566858f36582a4d09cb1765f154407b31fd3c3d0d5e62",
+    "tools/prepare_dependencies.py": "6f2f197c01c73014d526c095b0b217f390c537234618dc39ff0f4f35a3100ff5",
+    "tools/run_isolated_lab.py": "056f6f1eeae8386bf4d4106650eeece2f1c66aa220d9fc60a2adbd0942ff3a01",
+    "tools/source_manifest.py": "556a10e39daa23f568937507058ede817f1fc4213f04fc367db6ffb85da84329"
+  },
+  "lab": {
+    "schema_version": 1,
+    "generated_at": "2026-11-18T15:27:38.188986+00:00",
+    "synthetic": true,
+    "environment": {
+      "python": "3.12.16",
+      "system": "Linux",
+      "machine": "x86_64",
+      "cryptography": "50.0.2"
+    },
+    "network_isolation": {
+      "passed": true,
+      "interfaces": [
+        "lo"
+      ],
+      "default_ipv4_routes": [],
+      "external_probe": {
+        "target": "192.0.2.1:443 (documentation-only address)",
+        "outcome": "network_unreachable",
+        "errno": 101
+      },
+      "boundary": "container network namespace; no physical air-gap or hypervisor assurance"
+    },
+    "source_manifest": {
+      "Dockerfile": "a7cb81448165819f5ff9acdba8b409e44d3d2e712bcc98f6667277ca158d586b",
+      "architecture/flow-register.json": "290531cd0c74663a2893eaa9c2edd4af8af7eff421a2465be476c7297d8c970d",
+      "assurance/__init__.py": "617e4989addec2744d4d5a4e8a7ee405a0ad85910502f5df81e60d32a983dbb3",
+      "assurance/admission.py": "2da245074b2671d2272a4e5ad890609b8a471cb4969e5fe5ef224428c62b47de",
+      "assurance/audit.py": "287cee6cfb409f4909c2fe442e202dccdad42b804a872485079e01796154254e",
+      "assurance/crypto.py": "8cfadfad203f81423e851e8b4425d0270edf3b7bcf6914ff03440937e0fe7ed8",
+      "assurance/inventory.py": "29db809c08bbd245e016d0756f48c2e99cf9998d13f39f71ffcd914c554716db",
+      "assurance/observability.py": "255a8ff8c1e15e078a318aeeb8b9c84ce18d0a254a605c4e2269c4bf2995cfc7",
+      "assurance/policy.py": "11eabdaaa8d5b3d4a85eb60bfda7f4462f3430fb7cd1e28b3db7be8494c2f31b",
+      "assurance/recovery.py": "d129236b6501f56de8b20920db03c416055bb94b01d8a895860d1180dc141d81",
+      "assurance/run.py": "137f2f094567865bc60d3ca29605a621b641f7f9271ca189f21cf1e2f62cca8d",
+      "assurance/updates.py": "ee46227c06dfeb1effef947ae6f9f2b68977a9c205cb3f6d83bdcca5c6736fe0",
+      "examples/advisory-snapshot.json": "715e575b44b50d4414363fb9389695946fb9c4f4d5ab91486afc47e0ef6888c6",
+      "examples/advisory-synthetic-negative.json": "41e2aa84ed4c897169b07ebc77dc30df7e998e0e5b9937bbea2014013d3cbf47",
+      "examples/boundaries/bfsi.json": "18d275f366f043050d5e2f57559d664162b13abd478c39d0c4d5978a92a6ea22",
+      "examples/boundaries/government.json": "4b0eea90babcf1d39ea9f5532e8c6a00e63418029ee77684a3d410c84867a845",
+      "examples/boundaries/oil-gas.json": "31c89ec3b8f2d7f861c85d830eb66988cee93ac6f3dfd9e6c695c3252be38422",
+      "examples/dependencies-external-only.json": "27e44e0f7909a718e56bc9195f711a994d5fcdede86d67d62da638b8274f2cae",
+      "examples/dependencies.json": "03d14c2f0a82ed074e9f620ad06acd480f6746104bee092ee472af3ee2c1f5f0",
+      "examples/packages/altered-artifact.json": "ef260328cb591c4b9b688e3be65c86ba5d9cc388fe443c00ee2d4e6f2e323c15",
+      "examples/packages/missing-approval.json": "7095d497e2982a75fe671ff62c19735b9022d8172b3a4169140d3ceb2a1a97bd",
+      "examples/packages/provenance-digest-mismatch.json": "300beeffc5c7de405049cbe8d4f22607cc2dc187bae1d8594ad18f110c4fd33b",
+      "examples/packages/trust-policy.json": "30f9501ffb4f66979fa73e21747bd587296adb178fe003c5339af2e91cb4fee0",
+      "examples/packages/unexpected-signer.json": "e491244a0cd23d463813716324ce86fd12bed10e3d0fc7d1bec5378e497d8628",
+      "examples/packages/valid.json": "ba007d25f826bc54488e0f55a2d3e85c1a0112b0d210cd54bd3a0ac3c4fe6a4c",
+      "examples/packages/wrong-architecture.json": "9b89bf9e75b6ce6ab436f321fbf95d1f13628bb41beae5722682f5fca389ddaa",
+      "examples/packages/wrong-destination.json": "7b0e04483fa6d4f29d18932c64292ee83787ac707d5160b48fefbaec5ceed28c",
+      "examples/sbom.cdx.json": "ecace9a3f51bdb3293e84309095c6aee07e913c066be1577719d801806d3b0b5",
+      "lab/__init__.py": "561c6591c241620800337840add1d3f3c5baa948c57f2bd3f4c301ab5295d727",
+      "lab/fixtures.py": "50198ccd7270f104718037c80d277607455411092dedd6ce6b5e2d7cb44554fc",
+      "lab/identity.py": "2beec24597d4d526a10d95b22aa1a9bae7d7ce3aab4707a2a2cf429eba75314a",
+      "lab/run.py": "b88e3d558f806718e23c915cb43fcadfa37b4469921d6434e7a6e984c83320ea",
+      "lab/service.py": "15dc261da5af5ccf83722581645803a298e1bfd480dd77386d1de16cba2a07f0",
+      "requirements.lock": "c5f30a7ce5ac66cfabe098d21bd12658219ce7cc0afb4930f41e0fcfd52ad0f2",
+      "tests/__init__.py": "f3024b8fb59f24b389c502012257c4a8479a3af4296b890dfad81d24a1290e3e",
+      "tests/test_assurance_crypto.py": "3a7622c981977e65dea77ca67b0829616aa9f36f1b8f90ba63550c8a3ba7b16f",
+      "tests/test_assurance_policy.py": "82e2f3ee94b6902900806e3866a266dc1412e9802add02bf0ad8cda8a28b4a2c",
+      "tests/test_capacity_model.py": "0fef2da730481a6e615167e7806143e4ebeeb84e7ef0a087b2cb8235b70c5e42",
+      "tests/test_dependencies.py": "fff91bbe45b3a84911fa96e7c145a5ff533c68f92ba0deb0a50e16ae3998db0b",
+      "tests/test_flows.py": "4c9880d3bee9af6c694eada4b3447c1cfc804deb8e7d4e7b8b33d5cd1cdf5714",
+      "tests/test_identity.py": "fe8f7e84ef930224ac27ac8bc25d86286fd79a1c2f4043b907e25f242f046d12",
+      "tests/test_service.py": "19c512ab6dfb71900492a0e83bdc539c3ed6e6054c48da75c5a7252fdceb0cd1",
+      "tools/__init__.py": "41d1987e9c6c3883c4ee94ca21ba9f45659acb6eea759de20409347d956b240e",
+      "tools/admit_fixture.py": "7ad375eb302cf6d1cd7416e92534882bec861593f519b01fc1a2d5d86a6c3e76",
+      "tools/benchmark.py": "eaa8d193cf5e13f71fdfebcad876fe71a25d89564eec6ee6c879c641059871cc",
+      "tools/capacity_model.py": "0e095ab21f6dc8317aa611f0da78f85645d2da6bafb2f36ec488015457157bdb",
+      "tools/dependency_analyzer.py": "90d7097de8956227856535be8949849604d9aac0dfece2087cc5572d85b0e837",
+      "tools/flow_validator.py": "fa58ccafe58e36fef3daac9c4922b9d67e2759819e87eed96ddbf19fc1ccec29",
+      "tools/pq_compatibility.py": "3087da7c754da72aa6b566858f36582a4d09cb1765f154407b31fd3c3d0d5e62",
+      "tools/prepare_dependencies.py": "6f2f197c01c73014d526c095b0b217f390c537234618dc39ff0f4f35a3100ff5",
+      "tools/run_isolated_lab.py": "056f6f1eeae8386bf4d4106650eeece2f1c66aa220d9fc60a2adbd0942ff3a01",
+      "tools/source_manifest.py": "556a10e39daa23f568937507058ede817f1fc4213f04fc367db6ffb85da84329"
+    },
+    "cases": [
+      {
+        "id": "flow_contracts",
+        "passed": true,
+        "observation": {
+          "issues": []
+        }
+      },
+      {
+        "id": "declared_local_dependencies",
+        "passed": true,
+        "observation": {
+          "available_local_capabilities": [
+            "local-login",
+            "local-read-record",
+            "local-monitoring",
+            "local-rebuild",
+            "local-named-service"
+          ]
+        }
+      },
+      {
+        "id": "central_visibility_unavailable",
+        "passed": true,
+        "observation": {
+          "unavailable_capabilities": [
+            "enterprise-visibility"
+          ]
+        }
+      },
+      {
+        "id": "clock_dependency_failure",
+        "passed": true,
+        "observation": {
+          "model_blocker": "local-time"
+        }
+      },
+      {
+        "id": "government_local_login",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "government_read_own_scope",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "government_cross_site_denied",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "government_cross_tenant_denied",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "government_viewer_action_denied",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "government_service_identity",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "government_approved_emergency_action",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "government_revocation_effective",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "bfsi_local_login",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "bfsi_read_own_scope",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "bfsi_cross_site_denied",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "bfsi_cross_tenant_denied",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "bfsi_viewer_action_denied",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "bfsi_service_identity",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "bfsi_approved_emergency_action",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "bfsi_revocation_effective",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "oil-gas_local_login",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "oil-gas_read_own_scope",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "oil-gas_cross_site_denied",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "oil-gas_cross_tenant_denied",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "oil-gas_viewer_action_denied",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "oil-gas_service_identity",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "oil-gas_approved_emergency_action",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "oil-gas_revocation_effective",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "role_expiry_denied",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "clock_rollback_denied",
+        "passed": true,
+        "observation": {
+          "observed_behavior": "fail closed"
+        }
+      },
+      {
+        "id": "key_rotation_preserves_old_read",
+        "passed": true,
+        "observation": {
+          "versions": [
+            1,
+            2
+          ]
+        },
+        "category": "expected-control"
+      },
+      {
+        "id": "key_recovery_clean_authority",
+        "passed": true,
+        "observation": "software keys recovered with two signed approvals and separate wrapping material",
+        "category": "expected-control"
+      },
+      {
+        "id": "key_recovery_without_two_approvals",
+        "passed": true,
+        "observation": "expected policy denial",
+        "category": "expected-control"
+      },
+      {
+        "id": "signed_bundle_admitted",
+        "passed": true,
+        "observation": "quarantine then acceptance",
+        "category": "expected-control"
+      },
+      {
+        "id": "altered_artifact_rejected",
+        "passed": true,
+        "observation": "expected policy denial",
+        "category": "expected-control"
+      },
+      {
+        "id": "unexpected_signer_rejected",
+        "passed": true,
+        "observation": "expected policy denial",
+        "category": "expected-control"
+      },
+      {
+        "id": "wrong_destination_rejected",
+        "passed": true,
+        "observation": "expected policy denial",
+        "category": "expected-control"
+      },
+      {
+        "id": "wrong_compatibility_rejected",
+        "passed": true,
+        "observation": "expected policy denial",
+        "category": "expected-control"
+      },
+      {
+        "id": "provenance_digest_rejected",
+        "passed": true,
+        "observation": "expected policy denial",
+        "category": "expected-control"
+      },
+      {
+        "id": "package_replay_rejected",
+        "passed": true,
+        "observation": "expected policy denial",
+        "category": "expected-control"
+      },
+      {
+        "id": "single_identity_duplicate_approval",
+        "passed": true,
+        "observation": "expected policy denial",
+        "category": "expected-control"
+      },
+      {
+        "id": "replay_state_restart_gap",
+        "passed": true,
+        "observation": "A fresh in-memory admission gate accepts the old signed release; protected durable anti-rollback state is required.",
+        "category": "observed-gap"
+      },
+      {
+        "id": "interrupted_update_before_activation",
+        "passed": true,
+        "observation": "expected policy denial",
+        "category": "expected-control"
+      },
+      {
+        "id": "interruption_preserves_active_release",
+        "passed": true,
+        "observation": {
+          "active_version": 1
+        },
+        "category": "expected-control"
+      },
+      {
+        "id": "rollback_without_approvals",
+        "passed": true,
+        "observation": "expected policy denial",
+        "category": "expected-control"
+      },
+      {
+        "id": "approved_rollback_observed",
+        "passed": true,
+        "observation": {
+          "active_version": 1
+        },
+        "category": "expected-control"
+      },
+      {
+        "id": "service_policy_allowed",
+        "passed": true,
+        "observation": "declared policy evaluation",
+        "category": "expected-control"
+      },
+      {
+        "id": "policy_denied_cross_tenant",
+        "passed": true,
+        "observation": "declared policy evaluation",
+        "category": "expected-control"
+      },
+      {
+        "id": "policy_denied_management_plane",
+        "passed": true,
+        "observation": "declared policy evaluation",
+        "category": "expected-control"
+      },
+      {
+        "id": "policy_denied_cross_site",
+        "passed": true,
+        "observation": "declared policy evaluation",
+        "category": "expected-control"
+      },
+      {
+        "id": "local_repeated_denials_detected",
+        "passed": true,
+        "observation": [
+          {
+            "rule": "repeated-auth-denials",
+            "site": "government",
+            "count": 5
+          }
+        ],
+        "category": "expected-control"
+      },
+      {
+        "id": "unknown_event_detection_gap",
+        "passed": true,
+        "observation": "unknown event type has no detection rule",
+        "category": "observed-gap"
+      },
+      {
+        "id": "local_retention_observed",
+        "passed": true,
+        "observation": {
+          "expired": 6,
+          "remaining": 1
+        },
+        "category": "expected-control"
+      },
+      {
+        "id": "central_freshness_changes_decision",
+        "passed": true,
+        "observation": {
+          "at_100": {
+            "sites": {
+              "government": {
+                "status": "current",
+                "age_seconds": 0
+              },
+              "bfsi": {
+                "status": "current",
+                "age_seconds": 0
+              },
+              "oil-gas": {
+                "status": "current",
+                "age_seconds": 0
+              }
+            },
+            "all_sites_current": true
+          },
+          "at_161": {
+            "sites": {
+              "government": {
+                "status": "delayed",
+                "age_seconds": 61
+              },
+              "bfsi": {
+                "status": "delayed",
+                "age_seconds": 61
+              },
+              "oil-gas": {
+                "status": "delayed",
+                "age_seconds": 61
+              }
+            },
+            "all_sites_current": false
+          }
+        },
+        "category": "expected-control"
+      },
+      {
+        "id": "export_private_fields_removed",
+        "passed": true,
+        "observation": {
+          "fields": [
+            "id",
+            "kind",
+            "site",
+            "time"
+          ],
+          "custody": {
+            "payload_sha256": "72743ebcd5e458b54a194bb1c96a76e645acee6e6e794211c3ed772bbf47d993",
+            "recipient": "ciso-review",
+            "batch_id": "batch-1",
+            "sender_key_id": "local-evidence",
+            "created_at": "2026-11-18T15:27:35.336162+00:00"
+          }
+        },
+        "category": "expected-control"
+      },
+      {
+        "id": "export_wrong_recipient",
+        "passed": true,
+        "observation": "expected policy denial",
+        "category": "expected-control"
+      },
+      {
+        "id": "export_replay_denied",
+        "passed": true,
+        "observation": "expected policy denial",
+        "category": "expected-control"
+      },
+      {
+        "id": "audit_checkpoint_verified",
+        "passed": true,
+        "observation": {
+          "record_count": 5
+        },
+        "category": "expected-control"
+      },
+      {
+        "id": "audit_truncation_detected",
+        "passed": true,
+        "observation": "expected policy denial",
+        "category": "expected-control"
+      },
+      {
+        "id": "audit_rewritten_chain_detected",
+        "passed": true,
+        "observation": "expected policy denial",
+        "category": "expected-control"
+      },
+      {
+        "id": "uncertain_order_preserved",
+        "passed": true,
+        "observation": "overlapping uncertainty intervals",
+        "category": "expected-control"
+      },
+      {
+        "id": "clean_restore_configuration_data_keys",
+        "passed": true,
+        "observation": {
+          "restored_records": 3,
+          "post_snapshot_records": 4,
+          "lost_records": 1,
+          "lost_record_ids": [
+            "post-snapshot"
+          ],
+          "measured_restore_seconds": [
+            0.0007787530000058496,
+            0.0007295009999950253,
+            0.0006881800000115845,
+            0.0006926459999903045,
+            0.0007204580000035321
+          ]
+        },
+        "category": "expected-control"
+      },
+      {
+        "id": "restore_wrong_wrapping_key",
+        "passed": true,
+        "observation": "expected policy denial",
+        "category": "expected-control"
+      },
+      {
+        "id": "actual_tmpfs_exhaustion",
+        "passed": true,
+        "observation": {
+          "passed": true,
+          "errno": 28,
+          "filesystem_limit_bytes": 65536,
+          "scope": "dedicated disposable tmpfs; application storage exhaustion, not host disk"
+        },
+        "category": "actual-resource-fault"
+      },
+      {
+        "id": "bounded_telemetry_backlog_loss",
+        "passed": true,
+        "observation": {
+          "policy": "oldest retained event evicted; explicit counter records the loss",
+          "evicted_events": 1
+        },
+        "category": "model-observation"
+      },
+      {
+        "id": "expired_certificate_lifecycle_denied",
+        "passed": true,
+        "observation": "cryptographically valid self-signed fixture is expired; lifecycle check only, no TLS path",
+        "category": "expected-control"
+      },
+      {
+        "id": "advisory_snapshot_age_exposed",
+        "passed": true,
+        "observation": {
+          "snapshot_age_seconds": 2266.877371072769,
+          "freshness": "current",
+          "findings": [
+            {
+              "name": "cryptography",
+              "version": "50.0.2",
+              "status": "no-match-in-query-snapshot",
+              "advisory_ids": []
+            },
+            {
+              "name": "cffi",
+              "version": "2.1.1",
+              "status": "no-match-in-query-snapshot",
+              "advisory_ids": []
+            },
+            {
+              "name": "pycparser",
+              "version": "3.12",
+              "status": "no-match-in-query-snapshot",
+              "advisory_ids": []
+            }
+          ],
+          "scope": "Exact-version catalog queries; no absence-of-vulnerability conclusion."
+        },
+        "category": "snapshot-observation"
+      },
+      {
+        "id": "placement_declarations_remain_unverified",
+        "passed": true,
+        "observation": [
+          {
+            "component": "workload",
+            "declared_region": "SYNTHETIC-A",
+            "status": "declared-only"
+          },
+          {
+            "component": "backup",
+            "declared_region": "SYNTHETIC-A",
+            "status": "declared-only"
+          },
+          {
+            "component": "evidence",
+            "declared_region": "SYNTHETIC-A",
+            "status": "declared-only"
+          },
+          {
+            "component": "recovery",
+            "declared_region": "SYNTHETIC-A",
+            "status": "declared-only"
+          }
+        ],
+        "category": "observed-gap"
+      },
+      {
+        "id": "local_ai_retrieval_allowed",
+        "passed": true,
+        "observation": "deterministic router, not learned-model inference",
+        "category": "expected-control"
+      },
+      {
+        "id": "local_ai_cross_tenant_denied",
+        "passed": true,
+        "observation": "expected policy denial",
+        "category": "expected-control"
+      },
+      {
+        "id": "local_ai_other_site_valid_reader_denied",
+        "passed": true,
+        "observation": "expected policy denial",
+        "category": "expected-control"
+      },
+      {
+        "id": "local_ai_shell_tool_denied",
+        "passed": true,
+        "observation": "expected policy denial",
+        "category": "expected-control"
+      },
+      {
+        "id": "injected_dns_failure_local_resource_path",
+        "passed": true,
+        "observation": "injected resolver failure; resource lookup is local in-memory, no DNS service outage measured",
+        "category": "injected-adapter-fault"
+      },
+      {
+        "id": "industry_government_local_decision",
+        "passed": true,
+        "observation": "synthetic review acknowledgement with two local approvers; no real transaction or industrial command",
+        "category": "expected-control"
+      },
+      {
+        "id": "industry_bfsi_local_decision",
+        "passed": true,
+        "observation": "synthetic review acknowledgement with two local approvers; no real transaction or industrial command",
+        "category": "expected-control"
+      },
+      {
+        "id": "industry_oil-gas_local_decision",
+        "passed": true,
+        "observation": "synthetic review acknowledgement with two local approvers; no real transaction or industrial command",
+        "category": "expected-control"
+      },
+      {
+        "id": "incident_compromised_identity_contained",
+        "passed": true,
+        "observation": "expected policy denial",
+        "category": "expected-control"
+      },
+      {
+        "id": "incident_local_time_unavailable_fail_closed",
+        "passed": true,
+        "observation": "expected policy denial",
+        "category": "expected-control"
+      }
+    ],
+    "measurements": {
+      "capacity_benchmark": {
+        "environment": {
+          "system": "Linux",
+          "machine": "x86_64",
+          "python": "3.12.16",
+          "sqlite": "3.46.1",
+          "logical_cpus_visible": 4
+        },
+        "workload": {
+          "events": 3000,
+          "trials": 5,
+          "queries_per_trial": 30,
+          "payload_bytes": 256,
+          "tenants": 3,
+          "severity_values": 5,
+          "distribution": "deterministic round-robin, fixed-size payload, one synchronous writer",
+          "storage": "temporary filesystem selected by caller; container run uses tmpfs",
+          "durability": "SQLite defaults; no forced power-loss or stable-media guarantee"
+        },
+        "raw_trials": [
+          {
+            "ingest_events_per_second": 760693.6410344184,
+            "queue_round_trip_events_per_second": 28223075.18668347,
+            "search_seconds": [
+              3.70140000001129e-05,
+              2.3384000002124594e-05,
+              2.2051999991390403e-05,
+              2.0380000009367905e-05,
+              3.236799999228879e-05,
+              2.42650000075173e-05,
+              2.0530000000462678e-05,
+              2.34040000037794e-05,
+              2.2543000000041502e-05,
+              2.0570000003772293e-05,
+              2.0400000011022712e-05,
+              2.021899999249399e-05,
+              2.0328999994490005e-05,
+              1.9659000003002802e-05,
+              1.9378000004621754e-05,
+              2.019000000075266e-05,
+              2.3535000011065677e-05,
+              2.1431999996934792e-05,
+              1.9868999999061998e-05,
+              1.9569000002661596e-05,
+              2.0810999998843727e-05,
+              2.0860999995875318e-05,
+              2.0519999992529847e-05,
+              2.0679999991557452e-05,
+              2.9562999998233863e-05,
+              1.9889000000716806e-05,
+              1.9749000003344008e-05,
+              1.9948999991470373e-05,
+              2.4856000010231583e-05,
+              2.0359000004077643e-05
+            ],
+            "storage_bytes": 864256,
+            "sqlite_backup_seconds": 0.0007803550000033965,
+            "reopen_and_count_seconds": 0.00019340299999726085
+          },
+          {
+            "ingest_events_per_second": 768829.203822924,
+            "queue_round_trip_events_per_second": 31295313.003502984,
+            "search_seconds": [
+              3.7726000002180626e-05,
+              2.191200000822846e-05,
+              2.097099999787133e-05,
+              2.3415000001136832e-05,
+              2.35440000011522e-05,
+              1.9639000001347995e-05,
+              2.1700999994322956e-05,
+              1.960900000597121e-05,
+              2.3944999995251237e-05,
+              2.1492000001899214e-05,
+              2.0320000004403482e-05,
+              2.06600000041135e-05,
+              1.984899999740719e-05,
+              2.025999999943906e-05,
+              2.0058999993466387e-05,
+              1.9829000009963238e-05,
+              2.005999999710184e-05,
+              2.1141000004831767e-05,
+              3.0445000007262024e-05,
+              2.0289999994815844e-05,
+              2.0280000001093867e-05,
+              2.0820999992565703e-05,
+              1.9909000002371613e-05,
+              2.0269000003736437e-05,
+              2.0529999986251823e-05,
+              1.939899999570116e-05,
+              1.9688999998379586e-05,
+              2.1111000009454983e-05,
+              2.0961000004149355e-05,
+              1.959899999803838e-05
+            ],
+            "storage_bytes": 864256,
+            "sqlite_backup_seconds": 0.0007375530000075514,
+            "reopen_and_count_seconds": 0.00016356999999800337
+          },
+          {
+            "ingest_events_per_second": 772363.3959493526,
+            "queue_round_trip_events_per_second": 30977974.661823727,
+            "search_seconds": [
+              3.6023000006935035e-05,
+              2.163199999927201e-05,
+              2.236299999935909e-05,
+              2.0089000003054025e-05,
+              2.4104999994278842e-05,
+              2.129099999592654e-05,
+              1.946800000496296e-05,
+              2.0178999989184376e-05,
+              2.0880999997530125e-05,
+              2.2844000000077358e-05,
+              2.074999999024385e-05,
+              1.9748999989133154e-05,
+              2.1330999999236155e-05,
+              1.9899999998074236e-05,
+              1.9639000001347995e-05,
+              2.2172000001319248e-05,
+              2.2673000003692323e-05,
+              2.0479999989220232e-05,
+              1.9488999996042367e-05,
+              1.97990000003756e-05,
+              2.0761000001812135e-05,
+              2.1130999996898936e-05,
+              2.0169999999097854e-05,
+              1.9958999999403204e-05,
+              2.0328999994490005e-05,
+              1.943799999537532e-05,
+              1.939899999570116e-05,
+              1.9499000003975198e-05,
+              2.06600000041135e-05,
+              1.952899999935198e-05
+            ],
+            "storage_bytes": 864256,
+            "sqlite_backup_seconds": 0.0007175739999922826,
+            "reopen_and_count_seconds": 0.00016599399999961406
+          },
+          {
+            "ingest_events_per_second": 776532.1626676566,
+            "queue_round_trip_events_per_second": 32120946.068742335,
+            "search_seconds": [
+              3.441100000145525e-05,
+              2.2022999999649073e-05,
+              2.036999998722422e-05,
+              1.9699000006312417e-05,
+              2.0889999987616648e-05,
+              2.0490000011363918e-05,
+              2.867199999911918e-05,
+              2.124099999889495e-05,
+              2.0880999997530125e-05,
+              2.02900000090267e-05,
+              2.0320000004403482e-05,
+              1.9758999997065985e-05,
+              2.2543000000041502e-05,
+              1.9868999999061998e-05,
+              2.0599999999149077e-05,
+              1.959899999803838e-05,
+              2.034000000605829e-05,
+              2.0721000012713375e-05,
+              1.9128000005252943e-05,
+              1.9287999990069693e-05,
+              1.9418999997355968e-05,
+              2.007000000503467e-05,
+              2.0469999995498256e-05,
+              2.0188999997117207e-05,
+              2.0520000006740702e-05,
+              1.984899999740719e-05,
+              1.9958999999403204e-05,
+              2.0230000004062276e-05,
+              2.554699999279819e-05,
+              1.9889000000716806e-05
+            ],
+            "storage_bytes": 864256,
+            "sqlite_backup_seconds": 0.0006823610000026292,
+            "reopen_and_count_seconds": 0.0001521730000035859
+          },
+          {
+            "ingest_events_per_second": 732521.6667712043,
+            "queue_round_trip_events_per_second": 31925761.960971933,
+            "search_seconds": [
+              5.8995999992816905e-05,
+              2.1580999998604966e-05,
+              1.9898999994438782e-05,
+              2.0769999991898658e-05,
+              2.079099999718892e-05,
+              1.946800000496296e-05,
+              2.034000000605829e-05,
+              2.0500000005085894e-05,
+              2.0831000000498534e-05,
+              2.0650999999816122e-05,
+              1.9688999998379586e-05,
+              2.0609999992871053e-05,
+              2.027000000737189e-05,
+              2.0359000004077643e-05,
+              1.9367999996688923e-05,
+              1.958899999010555e-05,
+              2.044999999384345e-05,
+              1.9789000006653623e-05,
+              1.9347999995034115e-05,
+              2.0280000001093867e-05,
+              2.0269999993161036e-05,
+              1.976899999078796e-05,
+              2.0820000003141104e-05,
+              2.091099999290691e-05,
+              2.0208999998772015e-05,
+              2.4826000000643944e-05,
+              2.2222000012561693e-05,
+              2.091000000348231e-05,
+              1.960900000597121e-05,
+              2.0109999994133432e-05
+            ],
+            "storage_bytes": 864256,
+            "sqlite_backup_seconds": 0.0006834840000067288,
+            "reopen_and_count_seconds": 0.00015093099999319293
+          }
+        ],
+        "summary": {
+          "ingest_events_per_second": {
+            "samples": 5,
+            "min": 732521.6667712043,
+            "median": 768829.203822924,
+            "p95_nearest_rank": 776532.1626676566,
+            "max": 776532.1626676566
+          },
+          "queue_round_trip_events_per_second": {
+            "samples": 5,
+            "min": 28223075.18668347,
+            "median": 31295313.003502984,
+            "p95_nearest_rank": 32120946.068742335,
+            "max": 32120946.068742335
+          },
+          "storage_bytes": {
+            "samples": 5,
+            "min": 864256,
+            "median": 864256,
+            "p95_nearest_rank": 864256,
+            "max": 864256
+          },
+          "sqlite_backup_seconds": {
+            "samples": 5,
+            "min": 0.0006823610000026292,
+            "median": 0.0007175739999922826,
+            "p95_nearest_rank": 0.0007803550000033965,
+            "max": 0.0007803550000033965
+          },
+          "reopen_and_count_seconds": {
+            "samples": 5,
+            "min": 0.00015093099999319293,
+            "median": 0.00016356999999800337,
+            "p95_nearest_rank": 0.00019340299999726085,
+            "max": 0.00019340299999726085
+          },
+          "search_seconds": {
+            "samples": 150,
+            "min": 1.9128000005252943e-05,
+            "median": 2.0390000010195308e-05,
+            "p95_nearest_rank": 2.9562999998233863e-05,
+            "max": 5.8995999992816905e-05
+          }
+        },
+        "limits": "Toy single-process SQLite/deque measurements, tmpfs in the isolated run, small samples, no vendor platform or production sizing inference."
+      },
+      "recovery": {
+        "samples_seconds": [
+          0.0007787530000058496,
+          0.0007295009999950253,
+          0.0006881800000115845,
+          0.0006926459999903045,
+          0.0007204580000035321
+        ],
+        "restored_records": 3,
+        "live_records_after_snapshot": 4,
+        "lost_post_snapshot_records": 1,
+        "lost_record_ids": [
+          "post-snapshot"
+        ],
+        "dependencies": [
+          "separate wrapping material",
+          "pinned approval public keys",
+          "Python packages",
+          "clean writable storage"
+        ],
+        "scope": "config/data/software-key fixture, not whole-site RTO/RPO"
+      }
+    },
+    "passed": true,
+    "limits": [
+      "Synthetic fixtures; no provider deployment or national accreditation.",
+      "Software key custody, ephemeral identities/signers/replay state; no HSM or protected durable anti-rollback state.",
+      "Signed custom envelope is not DSSE, a SLSA-level attestation, or independent builder assurance.",
+      "Policy models are not packet enforcement; AI is deterministic routing with no learned model.",
+      "Benchmark and restoration use small tmpfs fixtures; no production capacity/RTO inference.",
+      "Expected unsafe gaps are recorded as observed-gap cases; passed means expectations matched, not all controls are production safe."
+    ]
+  },
+  "passed": true
+}

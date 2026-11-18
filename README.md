@@ -46,7 +46,7 @@
 
 [Completion map](docs/contributions-08-28.md) · [Original results](research/2026-11-18-results.md) · [Executive decision brief](briefs/ciso-decision-brief.md) · [Measured verification](docs/expanded-verification.md)
 
-**Recorded local verification — 18 November 2026:** 102 unique regression tests, 78 scenario checks and six host post-quantum/interop checks passed. Expected unsafe gaps are also recorded. [Inspect the results and practical limits](docs/expanded-verification.md).
+**Recorded verification — 18 November 2026:** 102 unique regression tests and 78 scenario checks passed locally and in GitHub Actions; six separate host post-quantum/interop checks also passed. Expected unsafe gaps are also recorded. [Inspect the results and practical limits](docs/expanded-verification.md).
 
 ## Reproduce
 

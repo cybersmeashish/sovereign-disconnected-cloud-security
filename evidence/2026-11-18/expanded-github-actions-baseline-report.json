@@ -1,0 +1,383 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-11-18T15:27:31.118623+00:00",
+  "scope": "Synthetic reference lab, Docker/Podman network namespace",
+  "runtime": "docker",
+  "constraints": {
+    "network_mode": "none",
+    "read_only_root": true,
+    "dropped_capabilities": [
+      "ALL"
+    ],
+    "no_new_privileges": true,
+    "user": "65532:65532",
+    "memory_bytes": 268435456,
+    "pids_limit": 64,
+    "nano_cpus": 1000000000,
+    "tmpfs": {},
+    "image_id": "sha256:19dc6abd299771ca3d9b60f18421a4b0279f73a74c726f7cb26824dad056b298",
+    "exit_code": 0
+  },
+  "source_matches_image": true,
+  "source_manifest": {
+    "Dockerfile": "a7cb81448165819f5ff9acdba8b409e44d3d2e712bcc98f6667277ca158d586b",
+    "architecture/flow-register.json": "290531cd0c74663a2893eaa9c2edd4af8af7eff421a2465be476c7297d8c970d",
+    "assurance/__init__.py": "617e4989addec2744d4d5a4e8a7ee405a0ad85910502f5df81e60d32a983dbb3",
+    "assurance/admission.py": "2da245074b2671d2272a4e5ad890609b8a471cb4969e5fe5ef224428c62b47de",
+    "assurance/audit.py": "287cee6cfb409f4909c2fe442e202dccdad42b804a872485079e01796154254e",
+    "assurance/crypto.py": "8cfadfad203f81423e851e8b4425d0270edf3b7bcf6914ff03440937e0fe7ed8",
+    "assurance/inventory.py": "29db809c08bbd245e016d0756f48c2e99cf9998d13f39f71ffcd914c554716db",
+    "assurance/observability.py": "255a8ff8c1e15e078a318aeeb8b9c84ce18d0a254a605c4e2269c4bf2995cfc7",
+    "assurance/policy.py": "11eabdaaa8d5b3d4a85eb60bfda7f4462f3430fb7cd1e28b3db7be8494c2f31b",
+    "assurance/recovery.py": "d129236b6501f56de8b20920db03c416055bb94b01d8a895860d1180dc141d81",
+    "assurance/run.py": "137f2f094567865bc60d3ca29605a621b641f7f9271ca189f21cf1e2f62cca8d",
+    "assurance/updates.py": "ee46227c06dfeb1effef947ae6f9f2b68977a9c205cb3f6d83bdcca5c6736fe0",
+    "examples/advisory-snapshot.json": "715e575b44b50d4414363fb9389695946fb9c4f4d5ab91486afc47e0ef6888c6",
+    "examples/advisory-synthetic-negative.json": "41e2aa84ed4c897169b07ebc77dc30df7e998e0e5b9937bbea2014013d3cbf47",
+    "examples/boundaries/bfsi.json": "18d275f366f043050d5e2f57559d664162b13abd478c39d0c4d5978a92a6ea22",
+    "examples/boundaries/government.json": "4b0eea90babcf1d39ea9f5532e8c6a00e63418029ee77684a3d410c84867a845",
+    "examples/boundaries/oil-gas.json": "31c89ec3b8f2d7f861c85d830eb66988cee93ac6f3dfd9e6c695c3252be38422",
+    "examples/dependencies-external-only.json": "27e44e0f7909a718e56bc9195f711a994d5fcdede86d67d62da638b8274f2cae",
+    "examples/dependencies.json": "03d14c2f0a82ed074e9f620ad06acd480f6746104bee092ee472af3ee2c1f5f0",
+    "examples/packages/altered-artifact.json": "ef260328cb591c4b9b688e3be65c86ba5d9cc388fe443c00ee2d4e6f2e323c15",
+    "examples/packages/missing-approval.json": "7095d497e2982a75fe671ff62c19735b9022d8172b3a4169140d3ceb2a1a97bd",
+    "examples/packages/provenance-digest-mismatch.json": "300beeffc5c7de405049cbe8d4f22607cc2dc187bae1d8594ad18f110c4fd33b",
+    "examples/packages/trust-policy.json": "30f9501ffb4f66979fa73e21747bd587296adb178fe003c5339af2e91cb4fee0",
+    "examples/packages/unexpected-signer.json": "e491244a0cd23d463813716324ce86fd12bed10e3d0fc7d1bec5378e497d8628",
+    "examples/packages/valid.json": "ba007d25f826bc54488e0f55a2d3e85c1a0112b0d210cd54bd3a0ac3c4fe6a4c",
+    "examples/packages/wrong-architecture.json": "9b89bf9e75b6ce6ab436f321fbf95d1f13628bb41beae5722682f5fca389ddaa",
+    "examples/packages/wrong-destination.json": "7b0e04483fa6d4f29d18932c64292ee83787ac707d5160b48fefbaec5ceed28c",
+    "examples/sbom.cdx.json": "ecace9a3f51bdb3293e84309095c6aee07e913c066be1577719d801806d3b0b5",
+    "lab/__init__.py": "561c6591c241620800337840add1d3f3c5baa948c57f2bd3f4c301ab5295d727",
+    "lab/fixtures.py": "50198ccd7270f104718037c80d277607455411092dedd6ce6b5e2d7cb44554fc",
+    "lab/identity.py": "2beec24597d4d526a10d95b22aa1a9bae7d7ce3aab4707a2a2cf429eba75314a",
+    "lab/run.py": "b88e3d558f806718e23c915cb43fcadfa37b4469921d6434e7a6e984c83320ea",
+    "lab/service.py": "15dc261da5af5ccf83722581645803a298e1bfd480dd77386d1de16cba2a07f0",
+    "requirements.lock": "c5f30a7ce5ac66cfabe098d21bd12658219ce7cc0afb4930f41e0fcfd52ad0f2",
+    "tests/__init__.py": "f3024b8fb59f24b389c502012257c4a8479a3af4296b890dfad81d24a1290e3e",
+    "tests/test_assurance_crypto.py": "3a7622c981977e65dea77ca67b0829616aa9f36f1b8f90ba63550c8a3ba7b16f",
+    "tests/test_assurance_policy.py": "82e2f3ee94b6902900806e3866a266dc1412e9802add02bf0ad8cda8a28b4a2c",
+    "tests/test_capacity_model.py": "0fef2da730481a6e615167e7806143e4ebeeb84e7ef0a087b2cb8235b70c5e42",
+    "tests/test_dependencies.py": "fff91bbe45b3a84911fa96e7c145a5ff533c68f92ba0deb0a50e16ae3998db0b",
+    "tests/test_flows.py": "4c9880d3bee9af6c694eada4b3447c1cfc804deb8e7d4e7b8b33d5cd1cdf5714",
+    "tests/test_identity.py": "fe8f7e84ef930224ac27ac8bc25d86286fd79a1c2f4043b907e25f242f046d12",
+    "tests/test_service.py": "19c512ab6dfb71900492a0e83bdc539c3ed6e6054c48da75c5a7252fdceb0cd1",
+    "tools/__init__.py": "41d1987e9c6c3883c4ee94ca21ba9f45659acb6eea759de20409347d956b240e",
+    "tools/admit_fixture.py": "7ad375eb302cf6d1cd7416e92534882bec861593f519b01fc1a2d5d86a6c3e76",
+    "tools/benchmark.py": "eaa8d193cf5e13f71fdfebcad876fe71a25d89564eec6ee6c879c641059871cc",
+    "tools/capacity_model.py": "0e095ab21f6dc8317aa611f0da78f85645d2da6bafb2f36ec488015457157bdb",
+    "tools/dependency_analyzer.py": "90d7097de8956227856535be8949849604d9aac0dfece2087cc5572d85b0e837",
+    "tools/flow_validator.py": "fa58ccafe58e36fef3daac9c4922b9d67e2759819e87eed96ddbf19fc1ccec29",
+    "tools/pq_compatibility.py": "3087da7c754da72aa6b566858f36582a4d09cb1765f154407b31fd3c3d0d5e62",
+    "tools/prepare_dependencies.py": "6f2f197c01c73014d526c095b0b217f390c537234618dc39ff0f4f35a3100ff5",
+    "tools/run_isolated_lab.py": "056f6f1eeae8386bf4d4106650eeece2f1c66aa220d9fc60a2adbd0942ff3a01",
+    "tools/source_manifest.py": "556a10e39daa23f568937507058ede817f1fc4213f04fc367db6ffb85da84329"
+  },
+  "lab": {
+    "schema_version": 1,
+    "generated_at": "2026-11-18T15:27:31.041999+00:00",
+    "synthetic": true,
+    "environment": {
+      "python": "3.12.16",
+      "system": "Linux",
+      "machine": "x86_64"
+    },
+    "network_isolation": {
+      "passed": true,
+      "interfaces": [
+        "lo"
+      ],
+      "default_ipv4_routes": [],
+      "external_probe": {
+        "target": "192.0.2.1:443 (documentation-only address)",
+        "outcome": "network_unreachable",
+        "errno": 101
+      },
+      "boundary": "container network namespace; no physical air-gap or hypervisor assurance"
+    },
+    "source_manifest": {
+      "Dockerfile": "a7cb81448165819f5ff9acdba8b409e44d3d2e712bcc98f6667277ca158d586b",
+      "architecture/flow-register.json": "290531cd0c74663a2893eaa9c2edd4af8af7eff421a2465be476c7297d8c970d",
+      "assurance/__init__.py": "617e4989addec2744d4d5a4e8a7ee405a0ad85910502f5df81e60d32a983dbb3",
+      "assurance/admission.py": "2da245074b2671d2272a4e5ad890609b8a471cb4969e5fe5ef224428c62b47de",
+      "assurance/audit.py": "287cee6cfb409f4909c2fe442e202dccdad42b804a872485079e01796154254e",
+      "assurance/crypto.py": "8cfadfad203f81423e851e8b4425d0270edf3b7bcf6914ff03440937e0fe7ed8",
+      "assurance/inventory.py": "29db809c08bbd245e016d0756f48c2e99cf9998d13f39f71ffcd914c554716db",
+      "assurance/observability.py": "255a8ff8c1e15e078a318aeeb8b9c84ce18d0a254a605c4e2269c4bf2995cfc7",
+      "assurance/policy.py": "11eabdaaa8d5b3d4a85eb60bfda7f4462f3430fb7cd1e28b3db7be8494c2f31b",
+      "assurance/recovery.py": "d129236b6501f56de8b20920db03c416055bb94b01d8a895860d1180dc141d81",
+      "assurance/run.py": "137f2f094567865bc60d3ca29605a621b641f7f9271ca189f21cf1e2f62cca8d",
+      "assurance/updates.py": "ee46227c06dfeb1effef947ae6f9f2b68977a9c205cb3f6d83bdcca5c6736fe0",
+      "examples/advisory-snapshot.json": "715e575b44b50d4414363fb9389695946fb9c4f4d5ab91486afc47e0ef6888c6",
+      "examples/advisory-synthetic-negative.json": "41e2aa84ed4c897169b07ebc77dc30df7e998e0e5b9937bbea2014013d3cbf47",
+      "examples/boundaries/bfsi.json": "18d275f366f043050d5e2f57559d664162b13abd478c39d0c4d5978a92a6ea22",
+      "examples/boundaries/government.json": "4b0eea90babcf1d39ea9f5532e8c6a00e63418029ee77684a3d410c84867a845",
+      "examples/boundaries/oil-gas.json": "31c89ec3b8f2d7f861c85d830eb66988cee93ac6f3dfd9e6c695c3252be38422",
+      "examples/dependencies-external-only.json": "27e44e0f7909a718e56bc9195f711a994d5fcdede86d67d62da638b8274f2cae",
+      "examples/dependencies.json": "03d14c2f0a82ed074e9f620ad06acd480f6746104bee092ee472af3ee2c1f5f0",
+      "examples/packages/altered-artifact.json": "ef260328cb591c4b9b688e3be65c86ba5d9cc388fe443c00ee2d4e6f2e323c15",
+      "examples/packages/missing-approval.json": "7095d497e2982a75fe671ff62c19735b9022d8172b3a4169140d3ceb2a1a97bd",
+      "examples/packages/provenance-digest-mismatch.json": "300beeffc5c7de405049cbe8d4f22607cc2dc187bae1d8594ad18f110c4fd33b",
+      "examples/packages/trust-policy.json": "30f9501ffb4f66979fa73e21747bd587296adb178fe003c5339af2e91cb4fee0",
+      "examples/packages/unexpected-signer.json": "e491244a0cd23d463813716324ce86fd12bed10e3d0fc7d1bec5378e497d8628",
+      "examples/packages/valid.json": "ba007d25f826bc54488e0f55a2d3e85c1a0112b0d210cd54bd3a0ac3c4fe6a4c",
+      "examples/packages/wrong-architecture.json": "9b89bf9e75b6ce6ab436f321fbf95d1f13628bb41beae5722682f5fca389ddaa",
+      "examples/packages/wrong-destination.json": "7b0e04483fa6d4f29d18932c64292ee83787ac707d5160b48fefbaec5ceed28c",
+      "examples/sbom.cdx.json": "ecace9a3f51bdb3293e84309095c6aee07e913c066be1577719d801806d3b0b5",
+      "lab/__init__.py": "561c6591c241620800337840add1d3f3c5baa948c57f2bd3f4c301ab5295d727",
+      "lab/fixtures.py": "50198ccd7270f104718037c80d277607455411092dedd6ce6b5e2d7cb44554fc",
+      "lab/identity.py": "2beec24597d4d526a10d95b22aa1a9bae7d7ce3aab4707a2a2cf429eba75314a",
+      "lab/run.py": "b88e3d558f806718e23c915cb43fcadfa37b4469921d6434e7a6e984c83320ea",
+      "lab/service.py": "15dc261da5af5ccf83722581645803a298e1bfd480dd77386d1de16cba2a07f0",
+      "requirements.lock": "c5f30a7ce5ac66cfabe098d21bd12658219ce7cc0afb4930f41e0fcfd52ad0f2",
+      "tests/__init__.py": "f3024b8fb59f24b389c502012257c4a8479a3af4296b890dfad81d24a1290e3e",
+      "tests/test_assurance_crypto.py": "3a7622c981977e65dea77ca67b0829616aa9f36f1b8f90ba63550c8a3ba7b16f",
+      "tests/test_assurance_policy.py": "82e2f3ee94b6902900806e3866a266dc1412e9802add02bf0ad8cda8a28b4a2c",
+      "tests/test_capacity_model.py": "0fef2da730481a6e615167e7806143e4ebeeb84e7ef0a087b2cb8235b70c5e42",
+      "tests/test_dependencies.py": "fff91bbe45b3a84911fa96e7c145a5ff533c68f92ba0deb0a50e16ae3998db0b",
+      "tests/test_flows.py": "4c9880d3bee9af6c694eada4b3447c1cfc804deb8e7d4e7b8b33d5cd1cdf5714",
+      "tests/test_identity.py": "fe8f7e84ef930224ac27ac8bc25d86286fd79a1c2f4043b907e25f242f046d12",
+      "tests/test_service.py": "19c512ab6dfb71900492a0e83bdc539c3ed6e6054c48da75c5a7252fdceb0cd1",
+      "tools/__init__.py": "41d1987e9c6c3883c4ee94ca21ba9f45659acb6eea759de20409347d956b240e",
+      "tools/admit_fixture.py": "7ad375eb302cf6d1cd7416e92534882bec861593f519b01fc1a2d5d86a6c3e76",
+      "tools/benchmark.py": "eaa8d193cf5e13f71fdfebcad876fe71a25d89564eec6ee6c879c641059871cc",
+      "tools/capacity_model.py": "0e095ab21f6dc8317aa611f0da78f85645d2da6bafb2f36ec488015457157bdb",
+      "tools/dependency_analyzer.py": "90d7097de8956227856535be8949849604d9aac0dfece2087cc5572d85b0e837",
+      "tools/flow_validator.py": "fa58ccafe58e36fef3daac9c4922b9d67e2759819e87eed96ddbf19fc1ccec29",
+      "tools/pq_compatibility.py": "3087da7c754da72aa6b566858f36582a4d09cb1765f154407b31fd3c3d0d5e62",
+      "tools/prepare_dependencies.py": "6f2f197c01c73014d526c095b0b217f390c537234618dc39ff0f4f35a3100ff5",
+      "tools/run_isolated_lab.py": "056f6f1eeae8386bf4d4106650eeece2f1c66aa220d9fc60a2adbd0942ff3a01",
+      "tools/source_manifest.py": "556a10e39daa23f568937507058ede817f1fc4213f04fc367db6ffb85da84329"
+    },
+    "cases": [
+      {
+        "id": "flow_contracts",
+        "passed": true,
+        "observation": {
+          "issues": []
+        }
+      },
+      {
+        "id": "declared_local_dependencies",
+        "passed": true,
+        "observation": {
+          "available_local_capabilities": [
+            "local-login",
+            "local-read-record",
+            "local-monitoring",
+            "local-rebuild",
+            "local-named-service"
+          ]
+        }
+      },
+      {
+        "id": "central_visibility_unavailable",
+        "passed": true,
+        "observation": {
+          "unavailable_capabilities": [
+            "enterprise-visibility"
+          ]
+        }
+      },
+      {
+        "id": "clock_dependency_failure",
+        "passed": true,
+        "observation": {
+          "model_blocker": "local-time"
+        }
+      },
+      {
+        "id": "government_local_login",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "government_read_own_scope",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "government_cross_site_denied",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "government_cross_tenant_denied",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "government_viewer_action_denied",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "government_service_identity",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "government_approved_emergency_action",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "government_revocation_effective",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "bfsi_local_login",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "bfsi_read_own_scope",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "bfsi_cross_site_denied",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "bfsi_cross_tenant_denied",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "bfsi_viewer_action_denied",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "bfsi_service_identity",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "bfsi_approved_emergency_action",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "bfsi_revocation_effective",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "oil-gas_local_login",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "oil-gas_read_own_scope",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "oil-gas_cross_site_denied",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "oil-gas_cross_tenant_denied",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "oil-gas_viewer_action_denied",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "oil-gas_service_identity",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "oil-gas_approved_emergency_action",
+        "passed": true,
+        "observation": {
+          "http_status": 200
+        }
+      },
+      {
+        "id": "oil-gas_revocation_effective",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "role_expiry_denied",
+        "passed": true,
+        "observation": {
+          "http_status": 403
+        }
+      },
+      {
+        "id": "clock_rollback_denied",
+        "passed": true,
+        "observation": {
+          "observed_behavior": "fail closed"
+        }
+      }
+    ],
+    "passed": true,
+    "limitations": [
+      "Three logical site fixtures in one disposable container, not three deployed sites.",
+      "Authority, sessions, role state, and audit events are in memory.",
+      "Local HTTP is loopback only; production TLS, MFA, rate limiting, durable state and trusted time are absent.",
+      "Dependency availability is a declared graph model, not infrastructure measurement.",
+      "Flow validation checks contracts; it does not install firewall rules or approve transfers.",
+      "No sovereignty, legal, accreditation, HSM, physical air-gap or diode assurance."
+    ]
+  },
+  "passed": true
+}

@@ -20,6 +20,16 @@ Observed **18 November 2026**. These reference experiments extend contributions 
 
 **Passed means the observation matched the expectation.** Explicit unsafe gaps include restartable in-memory replay state and a missing rule for an unknown event type. Placement declarations remain unverified. These outcomes are reported, not treated as production-safe controls.
 
+## GitHub Actions verification
+
+The [published-code run](https://github.com/cybersmeashish/sovereign-disconnected-cloud-security/actions/runs/44335744863) completed successfully for commit [`747cf5428daa`](https://github.com/cybersmeashish/sovereign-disconnected-cloud-security/commit/747cf5428daa12a7b89126011a9f64accf4154af).
+Its regression-step log recorded **102 tests; OK** in 13.630 seconds. The expanded artifact recorded **78 passed scenario expectations**, explicit network isolation and **52 matching source hashes** on Linux x86_64 / Python 3.12.16.
+The recovery observation derives one missing record from an actual post-snapshot change; the dedicated tmpfs storage fault also repeated in CI.
+
+[Permanent run summary](../evidence/2026-11-18/expanded-github-actions-result.json) · [Unmodified expanded artifact](../evidence/2026-11-18/expanded-github-actions-isolation-report.json) · [Unmodified baseline artifact](../evidence/2026-11-18/expanded-github-actions-baseline-report.json)
+
+The downloaded artifacts are preserved here beyond GitHub's configured 14-day artifact retention. The code commit identifies the tested implementation; this later evidence-only record changes no runtime source. Counts describe unique cases, not totals accumulated across environments. The six host PQ checks were not repeated by this workflow.
+
 ## Reproduce
 
 Python 3.12 and Docker are the observed path. Prepare dependencies while connected:

@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-18T15:33:17.467413+00:00",
+  "run_url": "https://github.com/cybersmeashish/sovereign-disconnected-cloud-security/actions/runs/44335744863",
+  "tested_commit": "747cf5428daa12a7b89126011a9f64accf4154af",
+  "conclusion": "success",
+  "status": "completed",
+  "unit_tests": {
+    "unique_cases": 102,
+    "result": "OK",
+    "seconds": 13.63,
+    "step": "Run standard-library regression cases"
+  },
+  "scenario_checks": 78,
+  "baseline_scenarios_repeated": 30,
+  "source_hashes_matched": 52,
+  "runtime_environment": {
+    "python": "3.12.16",
+    "system": "Linux",
+    "machine": "x86_64",
+    "cryptography": "50.0.2"
+  },
+  "artifact_name": "disconnected-cloud-reference-evidence",
+  "permanent_artifacts": [
+    {
+      "downloaded_name": "expanded-isolation-report.json",
+      "permanent_copy": "expanded-github-actions-isolation-report.json",
+      "sha256": "7955f73d4d4262077489c7812dc923e4cb856d98283058d56afdafce2fe69d86"
+    },
+    {
+      "downloaded_name": "isolation-report.json",
+      "permanent_copy": "expanded-github-actions-baseline-report.json",
+      "sha256": "524470735d6932cca1b3da437b6b71763cd344df9a080faf8b3709150de316c7"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Set up job",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Install hash-locked host dependencies",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run standard-library regression cases",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Validate declared flows and model disconnection",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Prepare pinned runtime image",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Verify network-disabled container and source matching",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Retain bounded evidence",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Complete job",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "scope": "The same 102 unique tests were repeated on the host, local Linux container and CI; the count is not additive. The expanded 78 scenarios include the original 30. Six separate post-quantum checks were run on the author's host, not in CI. Passing expected-gap scenarios records a limitation, not production-safe enforcement."
+}

@@ -1,0 +1,7 @@
+flowchart LR
+  H[Enterprise hub] -. Connected window only .-> G[Local boundary gate]
+  G --> A[Local identity and authorization]
+  A --> W[Local workload]
+  W --> B[Local evidence buffer]
+  B -. Approved reconnection disclosure .-> H
+  W --> R[Local response and recovery]

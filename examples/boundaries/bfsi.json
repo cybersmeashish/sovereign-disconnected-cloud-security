@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "id": "bfsi-boundary-01",
+  "industry": "BFSI",
+  "site_id": "bfsi",
+  "business_process": "Synthetic financial transaction-review status",
+  "boundary_model": "intermittent",
+  "owners": {
+    "process": "bfsi:process-owner",
+    "security": "bfsi:security-owner",
+    "platform": "bfsi:platform-owner",
+    "identity": "bfsi:identity-owner",
+    "keys": "bfsi:keys-owner",
+    "disclosure": "bfsi:disclosure-owner",
+    "recovery": "bfsi:recovery-owner"
+  },
+  "data": {
+    "classification": "synthetic-internal",
+    "permitted_use": "Synthetic financial transaction-review status",
+    "forbidden_use": "Real personal, financial, production or classified information"
+  },
+  "placements": {
+    "primary": "bfsi:local-boundary",
+    "backup": "bfsi:local-boundary",
+    "evidence": "bfsi:local-boundary",
+    "recovery": "bfsi:local-boundary"
+  },
+  "operators": {
+    "administration": "bfsi:identity-admin",
+    "jurisdiction": "synthetic region; legal applicability unassessed",
+    "supplier_network_access": false
+  },
+  "keys": {
+    "workload_custodian": "bfsi:key-custodian",
+    "release_verification_owner": "bfsi:release-reviewer",
+    "recovery_custodian": "bfsi:recovery-owner",
+    "stage": "custody decisions only; no HSM, signature or key-recovery implementation"
+  },
+  "suppliers": {
+    "support": "Local owner reviews support requests and permitted disclosures",
+    "updates": "External preparation followed by declared, reviewed admission path",
+    "licensing": "No runtime licensing dependency in this standard-library lab; product deployments need separate review"
+  },
+  "permitted_flow_ids": [
+    "F2",
+    "F3",
+    "F8"
+  ],
+  "identity": {
+    "source": "Trusted local bootstrap fixture",
+    "scope": "bfsi/tenant-a",
+    "emergency_access": "Two distinct active, same-scope human approvers; resource-bound; maximum 300 seconds"
+  },
+  "exceptions": [],
+  "evidence": {
+    "implemented_reference": [
+      "Local login and own-resource access",
+      "Cross-site and cross-tenant denial",
+      "Resource-scoped emergency action",
+      "Immediate local identity revocation"
+    ],
+    "planned": [
+      "Provider placement assurance",
+      "Transfers, release signatures and custody",
+      "Durable audit evidence",
+      "Backup and key recovery"
+    ]
+  },
+  "approval_status": "Research reference record; no organizational or national approval asserted",
+  "open_question": "Which actual platform, supplier and recovery dependencies remain when connectivity is removed?"
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "id": "government-boundary-01",
+  "industry": "Government",
+  "site_id": "government",
+  "business_process": "Synthetic citizen-service status review",
+  "boundary_model": "strict_air_gap",
+  "owners": {
+    "process": "government:process-owner",
+    "security": "government:security-owner",
+    "platform": "government:platform-owner",
+    "identity": "government:identity-owner",
+    "keys": "government:keys-owner",
+    "disclosure": "government:disclosure-owner",
+    "recovery": "government:recovery-owner"
+  },
+  "data": {
+    "classification": "synthetic-internal",
+    "permitted_use": "Synthetic citizen-service status review",
+    "forbidden_use": "Real personal, financial, production or classified information"
+  },
+  "placements": {
+    "primary": "government:local-boundary",
+    "backup": "government:local-boundary",
+    "evidence": "government:local-boundary",
+    "recovery": "government:local-boundary"
+  },
+  "operators": {
+    "administration": "government:identity-admin",
+    "jurisdiction": "synthetic region; legal applicability unassessed",
+    "supplier_network_access": false
+  },
+  "keys": {
+    "workload_custodian": "government:key-custodian",
+    "release_verification_owner": "government:release-reviewer",
+    "recovery_custodian": "government:recovery-owner",
+    "stage": "custody decisions only; no HSM, signature or key-recovery implementation"
+  },
+  "suppliers": {
+    "support": "Local owner reviews support requests and permitted disclosures",
+    "updates": "External preparation followed by declared, reviewed admission path",
+    "licensing": "No runtime licensing dependency in this standard-library lab; product deployments need separate review"
+  },
+  "permitted_flow_ids": [
+    "F1",
+    "F4"
+  ],
+  "identity": {
+    "source": "Trusted local bootstrap fixture",
+    "scope": "government/tenant-a",
+    "emergency_access": "Two distinct active, same-scope human approvers; resource-bound; maximum 300 seconds"
+  },
+  "exceptions": [],
+  "evidence": {
+    "implemented_reference": [
+      "Local login and own-resource access",
+      "Cross-site and cross-tenant denial",
+      "Resource-scoped emergency action",
+      "Immediate local identity revocation"
+    ],
+    "planned": [
+      "Provider placement assurance",
+      "Transfers, release signatures and custody",
+      "Durable audit evidence",
+      "Backup and key recovery"
+    ]
+  },
+  "approval_status": "Research reference record; no organizational or national approval asserted",
+  "open_question": "Which actual platform, supplier and recovery dependencies remain when connectivity is removed?"
+}

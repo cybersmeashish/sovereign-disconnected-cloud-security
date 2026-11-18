@@ -1,0 +1,8 @@
+flowchart LR
+  W[Local workload] --> F[Disclosure review and filtering]
+  F --> O[One-way export boundary]
+  O --> H[Enterprise intake]
+  X[External updates] --> M[Separate approved physical transfer]
+  M --> Q[Local quarantine and admission]
+  Q --> W
+  I[Local identity and operational authority] --> W

@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "dependencies": [
+    {
+      "id": "local-time",
+      "owner": "synthetic:local-time-owner",
+      "location": "local",
+      "available": true,
+      "depends_on": []
+    },
+    {
+      "id": "local-identity-state",
+      "owner": "synthetic:local-identity-state-owner",
+      "location": "local",
+      "available": true,
+      "depends_on": []
+    },
+    {
+      "id": "local-identity",
+      "owner": "synthetic:local-identity-owner",
+      "location": "local",
+      "available": true,
+      "depends_on": [
+        "local-time",
+        "local-identity-state"
+      ]
+    },
+    {
+      "id": "local-record-store",
+      "owner": "synthetic:local-record-store-owner",
+      "location": "local",
+      "available": true,
+      "depends_on": []
+    },
+    {
+      "id": "local-dns",
+      "owner": "synthetic:local-dns-owner",
+      "location": "local",
+      "available": true,
+      "depends_on": []
+    },
+    {
+      "id": "local-telemetry",
+      "owner": "synthetic:local-telemetry-owner",
+      "location": "local",
+      "available": true,
+      "depends_on": [
+        "local-time",
+        "local-record-store"
+      ]
+    },
+    {
+      "id": "local-package-cache",
+      "owner": "synthetic:local-package-cache-owner",
+      "location": "local",
+      "available": true,
+      "depends_on": []
+    },
+    {
+      "id": "local-trust-material",
+      "owner": "synthetic:local-trust-material-owner",
+      "location": "local",
+      "available": true,
+      "depends_on": []
+    },
+    {
+      "id": "external-hub",
+      "owner": "synthetic:external-hub-owner",
+      "location": "external",
+      "available": true,
+      "depends_on": []
+    },
+    {
+      "id": "external-idp",
+      "owner": "synthetic:external-idp-owner",
+      "location": "external",
+      "available": true,
+      "depends_on": []
+    },
+    {
+      "id": "external-registry",
+      "owner": "synthetic:external-registry-owner",
+      "location": "external",
+      "available": true,
+      "depends_on": []
+    },
+    {
+      "id": "external-license-service",
+      "owner": "synthetic:external-license-service-owner",
+      "location": "external",
+      "available": true,
+      "depends_on": []
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "local-login",
+      "owner": "synthetic:local-login-owner",
+      "depends_on": [
+        "local-identity"
+      ]
+    },
+    {
+      "id": "local-read-record",
+      "owner": "synthetic:local-read-record-owner",
+      "depends_on": [
+        "local-identity",
+        "local-record-store"
+      ]
+    },
+    {
+      "id": "local-monitoring",
+      "owner": "synthetic:local-monitoring-owner",
+      "depends_on": [
+        "local-telemetry"
+      ]
+    },
+    {
+      "id": "local-rebuild",
+      "owner": "synthetic:local-rebuild-owner",
+      "depends_on": [
+        "local-package-cache",
+        "local-trust-material"
+      ]
+    },
+    {
+      "id": "local-named-service",
+      "owner": "synthetic:local-named-service-owner",
+      "depends_on": [
+        "local-dns",
+        "local-identity"
+      ]
+    },
+    {
+      "id": "enterprise-visibility",
+      "owner": "synthetic:enterprise-visibility-owner",
+      "depends_on": [
+        "external-hub"
+      ]
+    }
+  ]
+}

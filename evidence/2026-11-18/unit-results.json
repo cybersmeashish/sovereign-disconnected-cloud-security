@@ -1,0 +1,35 @@
+{
+  "observed_date": "2026-11-18",
+  "suite_unique_tests": 56,
+  "new_tests": 47,
+  "retained_capacity_tests": 9,
+  "host": {
+    "system": "Darwin",
+    "machine": "arm64",
+    "python": "Python 3.12.14",
+    "command": "python -m unittest discover -s tests -v",
+    "tests_run": 56,
+    "exit_code": 0,
+    "result": "OK"
+  },
+  "container": {
+    "system": "Linux",
+    "machine": "aarch64",
+    "python": "3.12.16",
+    "image_id": "sha256:eaeed308585d4e71efc8296b2437205a70768fde30883d54ef8d44b7ffb25ff2",
+    "network_mode": "none",
+    "read_only_root": true,
+    "command": "python -m unittest discover -s tests -v",
+    "tests_run": 56,
+    "exit_code": 0,
+    "result": "OK"
+  },
+  "coverage": {
+    "capacity_arithmetic": 9,
+    "dependency_graph": 10,
+    "flow_contracts": 11,
+    "local_identity_policy": 20,
+    "loopback_http_boundary": 6
+  },
+  "limits": "These are the same 56 tests on two environments, not 112 distinct tests. Integration scenarios are separately recorded."
+}

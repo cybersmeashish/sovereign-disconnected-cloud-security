@@ -1,4 +1,5 @@
-# Data flow contracts (Blueprint §5). Every permitted flow MUST be registered.
+# Original generic planning catalogue. Runnable instantiated contracts:
+# architecture/flow-register.json. Validation does not enforce network rules.
 required_fields: [owner, destination, classification, authorization, integrity, retention, failure_behavior]
 flows:
   F1:

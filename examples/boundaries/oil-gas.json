@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "id": "oil-gas-boundary-01",
+  "industry": "Oil & Gas",
+  "site_id": "oil-gas",
+  "business_process": "Synthetic remote-facility maintenance review",
+  "boundary_model": "one_way_export",
+  "owners": {
+    "process": "oil-gas:process-owner",
+    "security": "oil-gas:security-owner",
+    "platform": "oil-gas:platform-owner",
+    "identity": "oil-gas:identity-owner",
+    "keys": "oil-gas:keys-owner",
+    "disclosure": "oil-gas:disclosure-owner",
+    "recovery": "oil-gas:recovery-owner"
+  },
+  "data": {
+    "classification": "synthetic-internal",
+    "permitted_use": "Synthetic remote-facility maintenance review",
+    "forbidden_use": "Real personal, financial, production or classified information"
+  },
+  "placements": {
+    "primary": "oil-gas:local-boundary",
+    "backup": "oil-gas:local-boundary",
+    "evidence": "oil-gas:local-boundary",
+    "recovery": "oil-gas:local-boundary"
+  },
+  "operators": {
+    "administration": "oil-gas:identity-admin",
+    "jurisdiction": "synthetic region; legal applicability unassessed",
+    "supplier_network_access": false
+  },
+  "keys": {
+    "workload_custodian": "oil-gas:key-custodian",
+    "release_verification_owner": "oil-gas:release-reviewer",
+    "recovery_custodian": "oil-gas:recovery-owner",
+    "stage": "custody decisions only; no HSM, signature or key-recovery implementation"
+  },
+  "suppliers": {
+    "support": "Local owner reviews support requests and permitted disclosures",
+    "updates": "External preparation followed by declared, reviewed admission path",
+    "licensing": "No runtime licensing dependency in this standard-library lab; product deployments need separate review"
+  },
+  "permitted_flow_ids": [
+    "F5",
+    "F6",
+    "F7"
+  ],
+  "identity": {
+    "source": "Trusted local bootstrap fixture",
+    "scope": "oil-gas/tenant-a",
+    "emergency_access": "Two distinct active, same-scope human approvers; resource-bound; maximum 300 seconds"
+  },
+  "exceptions": [],
+  "evidence": {
+    "implemented_reference": [
+      "Local login and own-resource access",
+      "Cross-site and cross-tenant denial",
+      "Resource-scoped emergency action",
+      "Immediate local identity revocation"
+    ],
+    "planned": [
+      "Provider placement assurance",
+      "Transfers, release signatures and custody",
+      "Durable audit evidence",
+      "Backup and key recovery"
+    ]
+  },
+  "approval_status": "Research reference record; no organizational or national approval asserted",
+  "open_question": "Which actual platform, supplier and recovery dependencies remain when connectivity is removed?"
+}

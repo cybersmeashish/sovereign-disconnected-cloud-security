@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "dependencies": [
+    {
+      "id": "local-time",
+      "owner": "synthetic:local-time-owner",
+      "location": "local",
+      "available": true,
+      "depends_on": []
+    },
+    {
+      "id": "local-identity-state",
+      "owner": "synthetic:local-identity-state-owner",
+      "location": "local",
+      "available": true,
+      "depends_on": []
+    },
+    {
+      "id": "local-identity",
+      "owner": "synthetic:local-identity-owner",
+      "location": "local",
+      "available": true,
+      "depends_on": [
+        "local-time",
+        "local-identity-state"
+      ]
+    },
+    {
+      "id": "local-record-store",
+      "owner": "synthetic:local-record-store-owner",
+      "location": "local",
+      "available": true,
+      "depends_on": []
+    },
+    {
+      "id": "local-dns",
+      "owner": "synthetic:local-dns-owner",
+      "location": "local",
+      "available": true,
+      "depends_on": []
+    },
+    {
+      "id": "local-telemetry",
+      "owner": "synthetic:local-telemetry-owner",
+      "location": "local",
+      "available": true,
+      "depends_on": [
+        "local-time",
+        "local-record-store"
+      ]
+    },
+    {
+      "id": "local-package-cache",
+      "owner": "synthetic:local-package-cache-owner",
+      "location": "local",
+      "available": true,
+      "depends_on": []
+    },
+    {
+      "id": "local-trust-material",
+      "owner": "synthetic:local-trust-material-owner",
+      "location": "local",
+      "available": true,
+      "depends_on": []
+    },
+    {
+      "id": "external-hub",
+      "owner": "synthetic:external-hub-owner",
+      "location": "external",
+      "available": true,
+      "depends_on": []
+    },
+    {
+      "id": "external-idp",
+      "owner": "synthetic:external-idp-owner",
+      "location": "external",
+      "available": true,
+      "depends_on": []
+    },
+    {
+      "id": "external-registry",
+      "owner": "synthetic:external-registry-owner",
+      "location": "external",
+      "available": true,
+      "depends_on": []
+    },
+    {
+      "id": "external-license-service",
+      "owner": "synthetic:external-license-service-owner",
+      "location": "external",
+      "available": true,
+      "depends_on": []
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "login-with-external-idp",
+      "owner": "synthetic:identity-owner",
+      "depends_on": [
+        "external-idp"
+      ]
+    },
+    {
+      "id": "rebuild-with-external-registry",
+      "owner": "synthetic:build-owner",
+      "depends_on": [
+        "external-registry"
+      ]
+    },
+    {
+      "id": "licensed-product-start",
+      "owner": "synthetic:product-owner",
+      "depends_on": [
+        "external-license-service"
+      ]
+    }
+  ]
+}

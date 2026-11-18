@@ -1,0 +1,8 @@
+flowchart LR
+  H[Enterprise hub] --> Q[Approved local query endpoint]
+  Q --> A[Local authorization]
+  A --> W[Local workload]
+  W --> R[Reviewed result disclosure]
+  R --> H
+  K[Local identity and key custody] --> A
+  W --> E[Local evidence and recovery]

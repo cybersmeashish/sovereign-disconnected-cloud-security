@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "stage": "declared contracts; flow validation does not enforce or approve transfers",
+  "sites": {
+    "government": {
+      "boundary_model": "strict_air_gap"
+    },
+    "bfsi": {
+      "boundary_model": "intermittent"
+    },
+    "oil-gas": {
+      "boundary_model": "one_way_export"
+    }
+  },
+  "flows": [
+    {
+      "id": "F1",
+      "site_id": "government",
+      "name": "Local telemetry",
+      "source": "government:local-source",
+      "destination": "government:local-destination",
+      "direction": "local",
+      "kind": "network",
+      "owner": "government:flow-owner",
+      "classification": "synthetic-internal",
+      "authorization": "Named local roles and explicit process owner; no anonymous access",
+      "integrity": "Reference requirement: approved trust inputs and attributable records; transfer verifier planned",
+      "retention": {
+        "days": 30,
+        "owner": "government:evidence-owner",
+        "reason": "Synthetic research evidence window"
+      },
+      "failure_behavior": "queue_locally",
+      "allowed_when": "local_operation"
+    },
+    {
+      "id": "F2",
+      "site_id": "bfsi",
+      "name": "Connected query",
+      "source": "outside:approved-staging",
+      "destination": "bfsi:local-destination",
+      "direction": "inbound",
+      "kind": "network",
+      "owner": "bfsi:flow-owner",
+      "classification": "synthetic-internal",
+      "authorization": "Named local roles and explicit process owner; no anonymous access",
+      "integrity": "Reference requirement: approved trust inputs and attributable records; transfer verifier planned",
+      "retention": {
+        "days": 30,
+        "owner": "bfsi:evidence-owner",
+        "reason": "Synthetic research evidence window"
+      },
+      "failure_behavior": "deny",
+      "allowed_when": "connected",
+      "approval_roles": [
+        "bfsi:process-owner",
+        "bfsi:security-reviewer"
+      ]
+    },
+    {
+      "id": "F3",
+      "site_id": "bfsi",
+      "name": "Approved query result",
+      "source": "bfsi:local-source",
+      "destination": "outside:approved-intake",
+      "direction": "outbound",
+      "kind": "network",
+      "owner": "bfsi:flow-owner",
+      "classification": "synthetic-aggregate",
+      "authorization": "Named local roles and explicit process owner; no anonymous access",
+      "integrity": "Reference requirement: approved trust inputs and attributable records; transfer verifier planned",
+      "retention": {
+        "days": 30,
+        "owner": "bfsi:evidence-owner",
+        "reason": "Synthetic research evidence window"
+      },
+      "failure_behavior": "deny",
+      "allowed_when": "connected",
+      "approval_roles": [
+        "bfsi:process-owner",
+        "bfsi:security-reviewer"
+      ],
+      "disclosure_review_required": true
+    },
+    {
+      "id": "F4",
+      "site_id": "government",
+      "name": "Offline update admission",
+      "source": "outside:approved-staging",
+      "destination": "government:local-destination",
+      "direction": "inbound",
+      "kind": "removable_media",
+      "owner": "government:flow-owner",
+      "classification": "synthetic-internal",
+      "authorization": "Named local roles and explicit process owner; no anonymous access",
+      "integrity": "Reference requirement: approved trust inputs and attributable records; transfer verifier planned",
+      "retention": {
+        "days": 30,
+        "owner": "government:evidence-owner",
+        "reason": "Synthetic research evidence window"
+      },
+      "failure_behavior": "stop_and_review",
+      "allowed_when": "approved_transfer_window",
+      "approval_roles": [
+        "government:process-owner",
+        "government:security-reviewer"
+      ],
+      "stages": [
+        "approved_transfer",
+        "quarantine",
+        "local_repository",
+        "reviewed_deployment"
+      ]
+    },
+    {
+      "id": "F5",
+      "site_id": "oil-gas",
+      "name": "Approved one-way report export",
+      "source": "oil-gas:local-source",
+      "destination": "outside:approved-intake",
+      "direction": "outbound",
+      "kind": "network",
+      "owner": "oil-gas:flow-owner",
+      "classification": "synthetic-aggregate",
+      "authorization": "Named local roles and explicit process owner; no anonymous access",
+      "integrity": "Reference requirement: approved trust inputs and attributable records; transfer verifier planned",
+      "retention": {
+        "days": 30,
+        "owner": "oil-gas:evidence-owner",
+        "reason": "Synthetic research evidence window"
+      },
+      "failure_behavior": "deny",
+      "allowed_when": "connected",
+      "approval_roles": [
+        "oil-gas:process-owner",
+        "oil-gas:security-reviewer"
+      ],
+      "disclosure_review_required": true
+    },
+    {
+      "id": "F6",
+      "site_id": "oil-gas",
+      "name": "Local recovery copy",
+      "source": "oil-gas:local-source",
+      "destination": "oil-gas:local-destination",
+      "direction": "local",
+      "kind": "network",
+      "owner": "oil-gas:flow-owner",
+      "classification": "synthetic-internal",
+      "authorization": "Named local roles and explicit process owner; no anonymous access",
+      "integrity": "Reference requirement: approved trust inputs and attributable records; transfer verifier planned",
+      "retention": {
+        "days": 30,
+        "owner": "oil-gas:evidence-owner",
+        "reason": "Synthetic research evidence window"
+      },
+      "failure_behavior": "deny",
+      "allowed_when": "local_operation"
+    },
+    {
+      "id": "F7",
+      "site_id": "oil-gas",
+      "name": "Offline update import",
+      "source": "outside:approved-staging",
+      "destination": "oil-gas:local-destination",
+      "direction": "inbound",
+      "kind": "removable_media",
+      "owner": "oil-gas:flow-owner",
+      "classification": "synthetic-internal",
+      "authorization": "Named local roles and explicit process owner; no anonymous access",
+      "integrity": "Reference requirement: approved trust inputs and attributable records; transfer verifier planned",
+      "retention": {
+        "days": 30,
+        "owner": "oil-gas:evidence-owner",
+        "reason": "Synthetic research evidence window"
+      },
+      "failure_behavior": "stop_and_review",
+      "allowed_when": "approved_transfer_window",
+      "approval_roles": [
+        "oil-gas:process-owner",
+        "oil-gas:security-reviewer"
+      ],
+      "stages": [
+        "approved_transfer",
+        "quarantine",
+        "local_repository",
+        "reviewed_deployment"
+      ]
+    },
+    {
+      "id": "F8",
+      "site_id": "bfsi",
+      "name": "Local record service",
+      "source": "bfsi:local-source",
+      "destination": "bfsi:local-destination",
+      "direction": "local",
+      "kind": "network",
+      "owner": "bfsi:flow-owner",
+      "classification": "synthetic-internal",
+      "authorization": "Named local roles and explicit process owner; no anonymous access",
+      "integrity": "Reference requirement: approved trust inputs and attributable records; transfer verifier planned",
+      "retention": {
+        "days": 30,
+        "owner": "bfsi:evidence-owner",
+        "reason": "Synthetic research evidence window"
+      },
+      "failure_behavior": "deny",
+      "allowed_when": "local_operation"
+    }
+  ]
+}

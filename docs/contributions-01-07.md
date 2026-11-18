@@ -1,4 +1,4 @@
-# Contributions 01–07 — delivered reference work
+Reference Architectures ,Frameworks and tools 
 
 18 November 2026 · Ashish Srivastava
 

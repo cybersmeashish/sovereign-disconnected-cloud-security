@@ -4,7 +4,7 @@
 
 **Operational consequence:** central disconnection can preserve legitimate local action while degrading enterprise visibility. Missing central evidence cannot justify broader local privileges. Conversely, valid package signatures alone cannot show that a release is fresh after local state is lost.
 
-**Measured reference evidence:** 101 regression cases passed in host/container execution, 78 scenario expectations matched, and six maintained-implementation PQ/interop checks passed. The network namespace had only loopback; denied cross-scope access, signed import rejection and clean software-key/config/data restoration were exercised. Actual storage exhaustion produced `ENOSPC` on a disposable 64 KiB tmpfs.
+**Measured reference evidence:** 102 regression cases passed in host/container execution, 78 scenario expectations matched, and six maintained-implementation PQ/interop checks passed. The network namespace had only loopback; denied cross-scope access, signed import rejection and clean software-key/config/data restoration were exercised. Actual storage exhaustion produced `ENOSPC` on a disposable 64 KiB tmpfs.
 
 **Unsafe findings:** restarting the in-memory admission gate loses replay history; an unknown event type has no detector; signed or matching location claims do not independently establish placement. Retention loss and delayed central reports require explicit decision treatment.
 

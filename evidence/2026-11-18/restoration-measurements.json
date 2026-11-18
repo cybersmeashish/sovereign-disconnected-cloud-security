@@ -1,13 +1,17 @@
 {
   "samples_seconds": [
-    0.0005235839998931624,
-    0.0004852090005442733,
-    0.00047516700033156667,
-    0.00046008400022401474,
-    0.0004693339997174917
+    0.0005245339998509735,
+    0.00048749400048109237,
+    0.00047407700003532227,
+    0.0004908679993604892,
+    0.00046536799982277444
   ],
   "restored_records": 3,
+  "live_records_after_snapshot": 4,
   "lost_post_snapshot_records": 1,
+  "lost_record_ids": [
+    "post-snapshot"
+  ],
   "dependencies": [
     "separate wrapping material",
     "pinned approval public keys",

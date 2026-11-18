@@ -170,7 +170,10 @@ def exercise(state, faults):
     record("uncertain_order_preserved", ordering((100,5),(103,5)) == "indeterminate", "overlapping uncertainty intervals")
 
     recovery_times = []
-    site_backup = snapshot({"site": "government", "active_release": 1}, events[:3], key_backup, wrapping)
+    live_records = copy.deepcopy(events[:3])
+    site_backup = snapshot({"site": "government", "active_release": 1}, live_records, key_backup, wrapping)
+    live_records.append({"id": "post-snapshot", "time": 101, "site": "government",
+                         "kind": "auth_denied", "details": {"synthetic": True}})
     recovery_evidence = evidence(canonical(site_backup), "restore-site")
     for _ in range(5):
         with tempfile.TemporaryDirectory(dir=state) as clean:
@@ -181,8 +184,12 @@ def exercise(state, faults):
             assert restored_vault.decrypt(first) == b"synthetic protected record"
             recovery_times.append(time.perf_counter() - started)
             assert restored["records"] == events[:3]
-    record("clean_restore_configuration_data_keys", True, {"restored_records": 3, "post_snapshot_records": 4,
-           "lost_records": 1, "measured_restore_seconds": recovery_times})
+    restored_ids = {event["id"] for event in restored["records"]}
+    missing_ids = sorted({event["id"] for event in live_records} - restored_ids)
+    record("clean_restore_configuration_data_keys", missing_ids == ["post-snapshot"],
+           {"restored_records": len(restored_ids), "post_snapshot_records": len(live_records),
+            "lost_records": len(missing_ids), "lost_record_ids": missing_ids,
+            "measured_restore_seconds": recovery_times})
     with tempfile.TemporaryDirectory(dir=state) as clean:
         denied("restore_wrong_wrapping_key", lambda: restore(site_backup, AESGCM.generate_key(bit_length=256),
                recovery_evidence, policy, clean))
@@ -246,7 +253,9 @@ def exercise(state, faults):
     clock.value = float("nan")
     denied("incident_local_time_unavailable_fail_closed", lambda: authority.authorize(other,"read_record","bfsi-record-a"))
     return cases, {"capacity_benchmark": benchmark(state), "recovery": {
-        "samples_seconds": recovery_times, "restored_records": 3, "lost_post_snapshot_records": 1,
+        "samples_seconds": recovery_times, "restored_records": len(restored_ids),
+        "live_records_after_snapshot": len(live_records),
+        "lost_post_snapshot_records": len(missing_ids), "lost_record_ids": missing_ids,
         "dependencies": ["separate wrapping material", "pinned approval public keys", "Python packages", "clean writable storage"],
         "scope": "config/data/software-key fixture, not whole-site RTO/RPO"}}
 

@@ -155,6 +155,17 @@ class CryptoAndAdmission(unittest.TestCase):
             with self.assertRaises(Rejected):
                 restore(altered, wrapping, self.evidence(canonical(altered), "restore-site"), self.policy, directory)
 
+    def test_snapshot_preserves_actual_point_in_time(self):
+        wrapping = AESGCM.generate_key(bit_length=256)
+        live = [{"id": "before-snapshot"}]
+        backup = snapshot({"site": "government"}, live, {"simulated": True}, wrapping)
+        live.append({"id": "after-snapshot"})
+        with tempfile.TemporaryDirectory() as directory:
+            restored = restore(backup, wrapping, self.evidence(canonical(backup), "restore-site"),
+                               self.policy, directory)
+        missing = {item["id"] for item in live} - {item["id"] for item in restored["records"]}
+        self.assertEqual(missing, {"after-snapshot"})
+
     def test_published_positive_package_fixture(self):
         root = Path(__file__).resolve().parents[1] / "examples/packages"
         policy = json.loads((root / "trust-policy.json").read_text())

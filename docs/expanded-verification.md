@@ -4,8 +4,8 @@ Observed **18 November 2026**. These reference experiments extend contributions 
 
 | Check | Actual result |
 | --- | --- |
-| Host regression suite | 101 tests passed, 6.75 seconds |
-| Same suite, isolated Linux container | 101 passed, 8.089 seconds |
+| Host regression suite | 102 tests passed, 6.746 seconds |
+| Same suite, isolated Linux container | 102 passed, 7.548 seconds |
 | Expanded integration/scenario expectations | 78 passed; includes 30 earlier scenarios |
 | Post-quantum/interop experiments | Six checks passed with OpenSSL 3.6.3 9 Jun 2026 (Library: OpenSSL 3.6.3 9 Jun 2026) on Darwin arm64 |
 | Runtime source matching | 52 selected code/test/data/recipe/lock hashes matched |

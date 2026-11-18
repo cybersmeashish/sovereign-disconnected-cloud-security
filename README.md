@@ -1,5 +1,7 @@
 # Sovereign & Disconnected Cloud Security
 
+[![Verify reference lab](https://github.com/cybersmeashish/sovereign-disconnected-cloud-security/actions/workflows/verify.yml/badge.svg)](https://github.com/cybersmeashish/sovereign-disconnected-cloud-security/actions/workflows/verify.yml)
+
 **Ashish Srivastava** — reference research connecting sovereignty decisions, local operational authority, identity, dependency failure, controlled flows and inspectable evidence.
 
 ## Contributions 01–07
@@ -15,6 +17,8 @@
 | 07 | Offline identity and authorization | [Scoped resources, expiry, revocation, service identities and emergency approval](docs/offline-identity.md) |
 
 [Completion and evidence map](docs/contributions-01-07.md) · [Observed verification](docs/verification.md) · [Primary sources](docs/references.md) · [Future contribution map](ROADMAP.md)
+
+**Recorded verification — 18 November 2026:** 56 unique regression tests and 30 scenario checks passed, including a GitHub Actions run. [Inspect the results and practical limits](docs/verification.md).
 
 ## Reproduce
 

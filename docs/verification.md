@@ -19,6 +19,15 @@ Observed **18 November 2026**.
 
 The suite contains 47 new tests and the existing nine capacity-model tests. Running the same suite twice demonstrates two execution environments; it does not create 112 distinct test cases.
 
+## GitHub Actions verification
+
+The [published-code run](https://github.com/cybersmeashish/sovereign-disconnected-cloud-security/actions/runs/44325211645) completed successfully for commit [`b363f3ce7d8e`](https://github.com/cybersmeashish/sovereign-disconnected-cloud-security/commit/b363f3ce7d8e99d7cd5f68de4dd3bba94fb1d5c5).
+Its logs reported **56 tests; OK**. The downloaded artifact independently recorded **30 passed scenario checks**, explicit network isolation and **24 matching source hashes** on Linux x86_64 / Python 3.12.16.
+
+[Permanent run summary](../evidence/2026-11-18/github-actions-result.json) · [Unmodified artifact copy](../evidence/2026-11-18/github-actions-isolation-report.json)
+
+The GitHub-hosted artifact has a 14-day retention period; its copy above is committed here. These are repeated executions of the same 56 regression tests. The code commit identifies the tested implementation; the later evidence-only commit adds this record.
+
 ## Reproduce
 
 ```bash

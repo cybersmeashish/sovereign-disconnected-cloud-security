@@ -12,7 +12,7 @@
 | 06 | Reproducible isolated-site lab | [Pinned runtime and actual isolation checks](isolated-lab.md) | Observed Linux container run |
 | 07 | Offline identity and authorization | [Expiry, revocation, site/tenant scope, service identities and emergency approvals](offline-identity.md) | Tested in-memory reference and loopback HTTP |
 
-**Result:** 56 unique regression tests passed on the host and in the isolated container. All 30 integration/scenario checks passed. Source inputs were matched against the image. The environment retained local login and permitted actions while an external connection was unavailable.
+**Result:** 56 unique regression tests passed on the host and in the isolated container. All 30 integration/scenario checks passed. Source inputs were matched against the image. GitHub Actions repeated the same 56 tests and 30 scenarios successfully; its run and original artifact are linked in the verification page. The environment retained local login and permitted actions while an external connection was unavailable.
 
 [Recorded evidence and commands](verification.md) · [Primary sources](references.md) · [Next contributions](../ROADMAP.md)
 

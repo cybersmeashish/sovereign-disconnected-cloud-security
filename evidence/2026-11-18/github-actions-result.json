@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-18T14:35:32.417432+00:00",
+  "run_url": "https://github.com/cybersmeashish/sovereign-disconnected-cloud-security/actions/runs/44325211645",
+  "tested_commit": "b363f3ce7d8e99d7cd5f68de4dd3bba94fb1d5c5",
+  "conclusion": "success",
+  "status": "completed",
+  "unit_tests": {
+    "unique_cases": 56,
+    "result": "OK",
+    "log_observed": "Ran 56 tests; OK",
+    "step": "Run standard-library regression cases"
+  },
+  "scenario_checks": 30,
+  "source_hashes_matched": 24,
+  "runtime_environment": {
+    "python": "3.12.16",
+    "system": "Linux",
+    "machine": "x86_64"
+  },
+  "artifact": {
+    "name": "disconnected-cloud-reference-evidence",
+    "permanent_copy": "github-actions-isolation-report.json",
+    "sha256": "885000a0c264dd1ad78eeecee80d85881031e5b061034b28ffac10af60d45145"
+  },
+  "steps": [
+    {
+      "name": "Set up job",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run standard-library regression cases",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Validate declared flows and model disconnection",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Prepare pinned runtime image",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Verify network-disabled container and source matching",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Retain bounded evidence",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Complete job",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "scope": "The same 56 regression cases were repeated in GitHub Actions; the suite count is not additive across environments."
+}
